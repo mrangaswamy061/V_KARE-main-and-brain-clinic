@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>V-KARE Mind & Brain Clinic - Tumkur | Psychiatry, Orthopedics, Speech Therapy</title>
+    
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="V-KARE Mind & Brain Clinic, Tumkur offers expert multidisciplinary care in Psychiatry, Clinical Psychology, Child Orthopedics, Audiology, and Speech Therapy. Book appointments online.">
+    <meta name="keywords" content="V-KARE, Clinic Tumkur, Psychiatrist Tumkur, Speech Therapy Tumkur, Child Orthopedist, Psychology Tumkur, Mind and Brain">
+    <meta name="author" content="V-KARE Mind & Brain Clinic">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="portal.css">
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ========================================== -->
+    <!--          1. MAIN CLINIC WEBSITE            -->
+    <!-- ========================================== -->
+    <div id="main-site">
+        
+        <!-- HEADER & STICKY NAVIGATION -->
+        <header>
+            <div class="container navbar">
+                <a href="#" class="logo">
+                    <i class="fa-solid fa-brain"></i> V-<span>KARE</span>
+                </a>
+                
+                <nav class="nav-menu" id="nav-menu">
+                    <a href="#hero" class="nav-link active" data-translate="navHome">Home</a>
+                    <a href="#services" class="nav-link" data-translate="navServices">Services</a>
+                    <a href="#doctors" class="nav-link" data-translate="navDoctors">Specialists</a>
+                    <a href="#" id="nav-online-counselling" class="nav-link">Online Counselling</a>
+                    <a href="#why-choose" class="nav-link" data-translate="navAbout">About Us</a>
+                    <a href="#contact" class="nav-link" data-translate="navContact">Contact</a>
+                </nav>
+
+                <div class="nav-actions">
+                    <!-- Language dropdown -->
+                    <select id="lang-select" class="lang-selector">
+                        <option value="en">English</option>
+                        <option value="kn">ಕನ್ನಡ</option>
+                    </select>
+
+                    <!-- Hamburger button for mobile menu toggle -->
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- HERO SECTION -->
+            <section id="hero" class="hero">
+                <div class="container hero-grid">
+                    <div class="hero-content">
+                        <h1 data-translate="heroTitle">Expert Care for <span>Mind, Brain</span> & Child Development</h1>
+                        <p data-translate="heroSub">Multidisciplinary Healthcare Services Under One Roof. V-KARE brings professional psychiatry, child orthopedics, audiology, and therapy support directly to Tumkur.</p>
+                        <div class="hero-ctas">
+                            <a href="#booking" class="btn btn-primary" data-translate="heroBook"><i class="fa-regular fa-calendar-check"></i> Book Appointment</a>
+                            <a href="tel:9980999068" class="btn btn-secondary" data-translate="heroCall"><i class="fa-solid fa-phone"></i> Call Clinic</a>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-img-container">
+                        <img src="images/hero.png" alt="V-KARE Mind & Brain Clinic" class="hero-img">
+                        <!-- Floating graphic badges -->
+                        <div class="hero-badge hero-badge-1">
+                            <div class="badge-icon"><i class="fa-solid fa-notes-medical"></i></div>
+                            <div class="badge-text">
+                                <h4 data-translate="heroBadge1">Multidisciplinary</h4>
+                                <p data-translate="heroBadge1Sub">All specialties under one roof</p>
+                            </div>
+                        </div>
+                        <div class="hero-badge hero-badge-2" onclick="openLicensedExpertsModal()" style="cursor:pointer; transition:transform 0.2s ease, box-shadow 0.2s ease;" title="Click to view all verified medical experts">
+                            <div class="badge-icon" style="background:#dbeafe; color:#1d4ed8;"><i class="fa-solid fa-user-doctor"></i></div>
+                            <div class="badge-text">
+                                <h4 data-translate="heroBadge2" style="display:flex; align-items:center; gap:0.4rem;">Licensed Experts <i class="fa-solid fa-chevron-right" style="font-size:0.7rem; color:#2563eb;"></i></h4>
+                                <p data-translate="heroBadge2Sub">Verified Medical Licenses & Profiles</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ONLINE COUNSELLING LANDING PAGE SECTION -->
+            <section id="online-counselling-landing" class="section section-bg" style="display:none;">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Online Counselling & Video Consultation</h2>
+                        <p>Receive professional, confidential psychiatric care and therapeutic support from the comfort of your home.</p>
+                    </div>
+
+                    <div class="hero-grid" style="align-items:center; margin-bottom:4rem;">
+                        <div>
+                            <h3>Secure Hospital-Grade Consultations</h3>
+                            <p style="margin:1.5rem 0; color:var(--text-muted);">V-KARE's Online Counselling platform ensures your records and communications are protected with AES-256 data encryption and secure WebRTC video connections.</p>
+                            <ul class="service-list" style="margin-bottom:2rem;">
+                                <li><i class="fa-solid fa-circle-check"></i> End-to-end encrypted session records</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Qualified specialist doctors and licensed psychologists</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Simple, one-click video meeting join button</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Multi-language support (English & Kannada)</li>
+                            </ul>
+                            <button id="btn-book-session-cta" class="btn btn-primary"><i class="fa-regular fa-calendar-plus"></i> Book an Online Session</button>
+                        </div>
+                        <div>
+                            <div class="benefit-card" style="background:var(--bg-ice); border:none;">
+                                <div class="benefit-icon"><i class="fa-solid fa-clock"></i></div>
+                                <h4>Timing & Duration</h4>
+                                <p style="margin:0.5rem 0;">Mon - Sat: 10:00 AM - 8:00 PM</p>
+                                <p style="font-size:0.9rem; color:var(--text-muted);">Standard session duration is 45 minutes.</p>
+                                <div style="margin-top:1.5rem; padding-top:1.5rem; border-top:1px solid rgba(0,0,0,0.05);">
+                                    <span style="font-size:0.85rem; color:var(--text-muted);">Consultation Fee</span>
+                                    <h3 style="margin-top:0.2rem; color:var(--portal-primary);">From ₹500 / Session</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 style="text-align:center; margin-bottom:2.5rem;">Why Choose Online Therapy with V-KARE?</h3>
+                    <div class="why-grid" style="margin-bottom:5rem;">
+                        <div class="benefit-card">
+                            <div class="benefit-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <h4>100% Confidentiality</h4>
+                            <p>All assessments, histories, and session notes are strictly encrypted on our secure local servers.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-icon"><i class="fa-solid fa-circle-user"></i></div>
+                            <h4>Personalized Care</h4>
+                            <p>One-on-one sessions for individual, couples, child behavior, and anxiety disorders.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                            <h4>Easy Accessibility</h4>
+                            <p>No downloads required. Join directly from your mobile, tablet, or PC browser.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-accordion">
+                        <h3 style="text-align:center; margin-bottom:2rem;">Frequently Asked Questions</h3>
+                        <div class="faq-item">
+                            <div class="faq-question">How does online counselling work? <i class="fa-solid fa-chevron-down"></i></div>
+                            <div class="faq-answer">Once you book a slot and complete the checkout, a secure meeting room is unlocked in your Patient Dashboard. Simply log in and click "Join Meeting" at the scheduled time.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">Is my information safe? <i class="fa-solid fa-chevron-down"></i></div>
+                            <div class="faq-answer">Yes, we implement bank-level AES-256 encryption for data. Files uploaded are scanned, renamed, and stored securely. Doctors only have access to their assigned patients.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">Can I reschedule or cancel? <i class="fa-solid fa-chevron-down"></i></div>
+                            <div class="faq-answer">Absolutely. You can reschedule or cancel any appointment from your dashboard up to 2 hours before the start time.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- TREATMENT MODES (ONLINE / OFFLINE) -->
+            <section class="treatment-modes-sec container">
+                <div class="modes-container">
+                    <div class="mode-card offline">
+                        <div class="mode-icon"><i class="fa-solid fa-house-chimney-medical"></i></div>
+                        <div class="mode-details">
+                            <h3 data-translate="modeOfflineTitle">In-Clinic Care (Offline)</h3>
+                            <p data-translate="modeOfflineDesc">Visit V-KARE Clinic in Tumkur for face-to-face diagnostics, physical rehabilitation, and consultations.</p>
+                            <button class="btn btn-primary" style="margin-top: 1rem; font-size: 0.9rem; padding: 0.6rem 1.2rem;" onclick="scrollToBookingWithMode('in-person')" data-translate="btnBookOffline">Book In-Clinic Slot</button>
+                        </div>
+                    </div>
+                    <div class="mode-card online">
+                        <div class="mode-icon"><i class="fa-solid fa-video"></i></div>
+                        <div class="mode-details">
+                            <h3 data-translate="modeOnlineTitle">Video Consultation (Online)</h3>
+                            <p data-translate="modeOnlineDesc">Consult with our board-certified psychiatrists, clinical psychologists, and therapists from home.</p>
+                            <button class="btn btn-primary" style="margin-top: 1rem; font-size: 0.9rem; padding: 0.6rem 1.2rem;" onclick="scrollToBookingWithMode('video')" data-translate="btnBookOnline">Book Video Slot</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- DETAILED SERVICES PAGE / TABS -->
+            <section id="services" class="section section-bg">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 data-translate="servicesTitle">Our Services</h2>
+                        <p data-translate="servicesSub">Explore our expert departments designed for mental wellness, physical healing, and communication skills.</p>
+                    </div>
+
+                    <!-- Tabs switcher buttons -->
+                    <div class="services-tabs">
+                        <button class="tab-btn active" data-tab="psych-tab" data-translate="tabPsych">Psychiatry & Psychology</button>
+                        <button class="tab-btn" data-tab="ortho-tab" data-translate="tabOrtho">Pediatric Orthopedics</button>
+                        <button class="tab-btn" data-tab="speech-tab" data-translate="tabSpeech">Audiology & Speech Therapy</button>
+                    </div>
+
+                    <!-- Psychiatry & Psychology Content -->
+                    <div class="services-content active" id="psych-tab">
+                        <div class="services-layout">
+                            <div class="service-details">
+                                <h3 data-translate="tabPsych">Psychiatry & Psychology</h3>
+                                <p class="service-description" data-translate="psychDesc">We provide comprehensive assessment and evidence-based clinical support for adults and children facing psychological, behavioural, and emotional challenges.</p>
+                                <ul class="service-list">
+                                    <li><i class="fa-solid fa-circle-check"></i> Depression</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Anxiety</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> De-addiction</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Sleep Disorders</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Behaviour Problems</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Cognitive Rehabilitation</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Psychotherapy & Counseling</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Learning Difficulties / ADHD</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Autism Support</li>
+                                </ul>
+                                <a href="#booking" onclick="scrollToBooking('psychiatry')" class="btn btn-primary" data-translate="navBook">Book Appointment</a>
+                            </div>
+                            <div class="service-image-container">
+                                <img src="images/mental_wellness.png" alt="Psychiatry & Psychology Services" style="width: 100%; height: auto;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pediatric Orthopedics Content -->
+                    <div class="services-content" id="ortho-tab">
+                        <div class="services-layout">
+                            <div class="service-details">
+                                <h3 data-translate="tabOrtho">Pediatric Orthopedics</h3>
+                                <p class="service-description" data-translate="orthoDesc">Specialized diagnostics and surgical solutions for congenital deformities, bone injuries, and neuromuscular motor conditions in children.</p>
+                                <ul class="service-list">
+                                    <li><i class="fa-solid fa-circle-check"></i> Club Foot (CTEV)</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Cerebral Palsy Rehabilitation</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Pediatric Trauma & Fractures</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Brachial Plexus Palsy</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Hand & Wrist Deformities</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Developmental Hip Dysplasia (DDH)</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Spine Deformities (Scoliosis)</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Limb Length Discrepancies</li>
+                                </ul>
+                                <a href="#booking" onclick="scrollToBooking('orthopedics')" class="btn btn-primary" data-translate="navBook">Book Appointment</a>
+                            </div>
+                            <div class="service-image-container">
+                                <img src="images/child_therapy.png" alt="Pediatric Orthopedic Services" style="width: 100%; height: auto;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Audiology & Speech Therapy Content -->
+                    <div class="services-content" id="speech-tab">
+                        <div class="services-layout">
+                            <div class="service-details">
+                                <h3 data-translate="tabSpeech">Audiology & Speech Therapy</h3>
+                                <p class="service-description" data-translate="speechDesc">Advanced evaluation of hearing capacity, speech correction, feeding difficulties, and specialized school-based therapy support.</p>
+                                <ul class="service-list">
+                                    <li><i class="fa-solid fa-circle-check"></i> Speech & Language Therapy</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Swallowing & Feeding Therapy</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Pediatric & Adult Hearing Evaluation</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Hearing Aid Fitting & Counseling</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Individualized Education Program (IEP)</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> School-Based Therapy Support</li>
+                                </ul>
+                                <a href="#booking" onclick="scrollToBooking('speech')" class="btn btn-primary" data-translate="navBook">Book Appointment</a>
+                            </div>
+                            <div class="service-image-container">
+                                <img src="images/child_therapy.png" alt="Audiology & Speech Therapy Services" style="width: 100%; height: auto;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DOCTORS PROFILE CARDS -->
+            <section id="doctors" class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 data-translate="doctorsTitle">Licensed Experts & Specialists</h2>
+                        <p data-translate="doctorsSub">Consult with our team of board-certified, licensed clinicians dedicated to your holistic recovery.</p>
+                        
+                        <!-- Specialty Category Filter Buttons -->
+                        <div class="doctor-filter-tabs" style="display:flex; justify-content:center; gap:0.6rem; margin-top:1.5rem; flex-wrap:wrap;">
+                            <button class="doc-filter-btn active" onclick="filterDoctorsByCategory('all', event)">🌐 All Experts</button>
+                            <button class="doc-filter-btn" onclick="filterDoctorsByCategory('psychiatry', event)">🧠 Psychiatry & Mental Health</button>
+                            <button class="doc-filter-btn" onclick="filterDoctorsByCategory('psychology', event)">👩‍⚕️ Clinical Psychology</button>
+                            <button class="doc-filter-btn" onclick="filterDoctorsByCategory('orthopedics', event)">🦴 Pediatric Orthopedics</button>
+                            <button class="doc-filter-btn" onclick="filterDoctorsByCategory('speech', event)">🗣️ Speech & Audiology</button>
+                        </div>
+                    </div>
+
+                    <!-- Populated dynamically via app.js -->
+                    <div class="doctors-grid" id="doctors-grid"></div>
+                </div>
+            </section>
+
+            <!-- APPOINTMENT BOOKING FORM -->
+            <section id="booking" class="section section-bg booking-section">
+                <div class="container booking-grid">
+                    <div class="booking-card">
+                        <h3 data-translate="bookingTitle">Online Appointment Booking</h3>
+                        <p data-translate="bookingSub">Submit your preferred slot. Our desk will contact you via Phone/WhatsApp to confirm.</p>
+                        
+                        <form id="appointment-form" onsubmit="submitAppointmentForm(event)" class="booking-form">
+                            <div class="form-group">
+                                <label for="booking-name" data-translate="formName">Patient Name</label>
+                                <input type="text" id="booking-name" data-translate="formName" required placeholder="Patient Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="booking-phone" data-translate="formPhone">Mobile Number</label>
+                                <input type="tel" id="booking-phone" data-translate="formPhone" required placeholder="Mobile Number" pattern="[0-9]{10}">
+                            </div>
+                            <div class="form-group">
+                                <label for="booking-email" data-translate="formEmail">Email Address</label>
+                                <input type="email" id="booking-email" data-translate="formEmail" placeholder="Email Address">
+                            </div>
+                            <div class="form-group">
+                                <label for="booking-dept" data-translate="formDept">Select Department</label>
+                                <select id="booking-dept" required onchange="onDeptChange()">
+                                    <option value="" disabled selected data-translate="formDept">Select Department</option>
+                                    <option value="psychiatry" data-translate="deptPsych">Psychiatry & Psychology</option>
+                                    <option value="orthopedics" data-translate="deptOrtho">Pediatric Orthopedics</option>
+                                    <option value="speech" data-translate="deptSpeech">Audiology & Speech Therapy</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="booking-date" data-translate="formDate">Preferred Date</label>
+                                <input type="date" id="booking-date" required min="2026-06-10">
+                            </div>
+                            <div class="form-group">
+                                <label for="booking-time" data-translate="formTime">Preferred Time</label>
+                                <select id="booking-time" required>
+                                    <option value="" disabled selected data-translate="formTime">Preferred Time</option>
+                                    <option value="10:00 AM">10:00 AM - 11:00 AM</option>
+                                    <option value="11:30 AM">11:30 AM - 12:30 PM</option>
+                                    <option value="02:30 PM">02:30 PM - 03:30 PM</option>
+                                    <option value="05:00 PM">05:00 PM - 06:00 PM</option>
+                                    <option value="06:30 PM">06:30 PM - 07:30 PM</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="booking-mode" data-translate="formMode">Consultation Mode</label>
+                                <select id="booking-mode" required>
+                                    <option value="in-person" data-translate="modeInPerson" selected>In-Person (Clinic Visit)</option>
+                                    <option value="video" data-translate="modeVideo">Online (Video Consultation)</option>
+                                </select>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="booking-msg" data-translate="formMsg">Brief details of condition (optional)</label>
+                                <textarea id="booking-msg" rows="3" data-translate="formMsg" placeholder="Brief details of condition (optional)"></textarea>
+                            </div>
+                            <div class="booking-btn-container">
+                                <button type="submit" class="btn btn-primary" data-translate="formSubmit">Book Appointment Now</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="booking-info-box">
+                        <div class="contact-step">
+                            <div class="step-num">1</div>
+                            <div class="step-text">
+                                <h4 data-translate="formDept">Select Department</h4>
+                                <p>Choose from Psychiatry, Pediatric Orthopedics, or Speech Pathologies depending on treatment required.</p>
+                            </div>
+                        </div>
+                        <div class="contact-step">
+                            <div class="step-num">2</div>
+                            <div class="step-text">
+                                <h4 data-translate="formDate">Select Slot & Date</h4>
+                                <p>Choose a convenient date and time range for your consultation slot.</p>
+                            </div>
+                        </div>
+                        <div class="contact-step">
+                            <div class="step-num">3</div>
+                            <div class="step-text">
+                                <h4 data-translate="formMode">Consultation Mode</h4>
+                                <p>Select In-Clinic visit or secure encrypted Video Consultation.</p>
+                            </div>
+                        </div>
+                        <div class="contact-step">
+                            <div class="step-num">4</div>
+                            <div class="step-text">
+                                <h4 data-translate="confirmWa">Confirm & Get Alerts</h4>
+                                <p>Get instant confirmation, real-time portal notifications, and WhatsApp/Email status updates.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TESTIMONIALS -->
+            <section class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 data-translate="testTitle">Patient Reviews</h2>
+                        <p data-translate="testSub">Read stories of recovery and hope from families who trusted our therapeutic care.</p>
+                    </div>
+                    
+                    <!-- Populated dynamically via app.js -->
+                    <div class="testimonials-grid" id="testimonials-grid"></div>
+                </div>
+            </section>
+
+            <!-- GALLERY -->
+            <section id="gallery" class="section section-bg">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 data-translate="galleryTitle">Clinic Gallery</h2>
+                        <p data-translate="gallerySub">A glimpse into V-KARE's modern clinic environment, child-friendly therapy zones, and events.</p>
+                    </div>
+
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="images/mental_wellness.png" alt="Counseling">
+                            <div class="gallery-overlay">
+                                <h4 data-translate="gal1">Modern Counseling Rooms</h4>
+                                <p>Psychiatry Department</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/child_therapy.png" alt="Therapy">
+                            <div class="gallery-overlay">
+                                <h4 data-translate="gal2">Child Sensory Play Zone</h4>
+                                <p>Speech & Orthopedic Department</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/hero.png" alt="Audiology">
+                            <div class="gallery-overlay">
+                                <h4 data-translate="gal3">Audiology Check Cabin</h4>
+                                <p>Audiology Department</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/mental_wellness.png" alt="Events">
+                            <div class="gallery-overlay">
+                                <h4 data-translate="gal4">Mental Health Awareness Event</h4>
+                                <p>Awareness Program</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- WHY CHOOSE V-KARE (ABOUT US) -->
+            <section id="why-choose" class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 data-translate="whyTitle">Why Choose V-KARE?</h2>
+                        <p data-translate="whySub">We blend high-quality evidence-based clinical expertise with emotional and physical rehabilitation.</p>
+                    </div>
+
+                    <div class="why-grid">
+                        <div class="why-card">
+                            <div class="why-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <h3 data-translate="whyCard1Title">Evidence-Based Care</h3>
+                            <p data-translate="whyCard1Text">All psychiatric therapies, pediatric surgeries, and audiology services are backed by proven clinical standards.</p>
+                        </div>
+                        <div class="why-card">
+                            <div class="why-icon"><i class="fa-solid fa-people-group"></i></div>
+                            <h3 data-translate="whyCard2Title">Holistic Multidisciplinary Team</h3>
+                            <p data-translate="whyCard2Text">Psychiatrists, Pediatric Orthopedicians, Speech Therapists, and Psychologists collaborating under one roof.</p>
+                        </div>
+                        <div class="why-card">
+                            <div class="why-icon"><i class="fa-solid fa-user-lock"></i></div>
+                            <h3 data-translate="whyCard3Title">Confidential & Safe</h3>
+                            <p data-translate="whyCard3Text">Your privacy is our priority. We maintain strict ethical standards for child and adult counselling.</p>
+                        </div>
+                        <div class="why-card">
+                            <div class="why-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                            <h3 data-translate="whyCard4Title">Accessible & Local</h3>
+                            <p data-translate="whyCard4Text">Conveniently located in Siddaganga Extension, Tumkur, offering world-class care locally.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTACT DETAILS & GOOGLE MAPS -->
+            <section id="contact" class="section section-bg">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 data-translate="contactTitleSec">Contact & Location</h2>
+                        <p data-translate="contactSubSec">Visit us at Tumkur or reach out directly for immediate support.</p>
+                    </div>
+
+                    <div class="contact-grid">
+                        <div class="contact-details">
+                            <div class="contact-card">
+                                <div class="contact-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                                <div class="contact-text">
+                                    <h4 data-translate="addressTitle">Clinic Address</h4>
+                                    <p data-translate="addressText">3rd Cross, Jain Bhavana Road, Siddaganga Extension, Tumkur, Karnataka – 572102</p>
+                                </div>
+                            </div>
+                            <div class="contact-card">
+                                <div class="contact-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                                <div class="contact-text">
+                                    <h4 data-translate="phoneTitle">Contact Numbers</h4>
+                                    <p data-translate="phoneText">9980999068</p>
+                                </div>
+                            </div>
+                            <div class="contact-card">
+                                <div class="contact-icon"><i class="fa-regular fa-clock"></i></div>
+                                <div class="contact-text">
+                                    <h4 data-translate="timingTitle">Working Hours</h4>
+                                    <p data-translate="timingText">Mon - Sat: 9:30 AM - 8:30 PM (Sunday Holiday)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Embedded Google Map -->
+                        <div class="contact-map-container">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.5160892705574!2d77.1083995759085!3d13.349079986991143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb02c3b2f5b8c9d%3A0xe2a8b94cc2b6c7a0!2sJain%20Bhavan%20Rd%2C%20Siddaganga%20Extension%2C%20Tumakuru%2C%20Karnataka%20572102!5e0!3m2!1sen!2sin!4v1718020000000!5m2!1sen!2sin" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="container footer-grid">
+                <div class="footer-col">
+                    <h3 class="logo"><i class="fa-solid fa-brain"></i> V-<span>KARE</span></h3>
+                    <p data-translate="footerAbout">V-KARE Mind & Brain Clinic is Tumkur's leading multidisciplinary healthcare clinic, providing dedicated services in Psychiatry, Child Orthopedics, Speech Pathology, and Counseling.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 data-translate="footerLinks">Quick Links</h4>
+                    <ul>
+                        <li><a href="#hero" data-translate="navHome">Home</a></li>
+                        <li><a href="#why-choose" data-translate="navAbout">About Us</a></li>
+                        <li><a href="#services" data-translate="navServices">Services</a></li>
+                        <li><a href="#doctors" data-translate="navDoctors">Specialists</a></li>
+                        <li><a href="#contact" data-translate="navContact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-translate="footerServices">Specialties</h4>
+                    <ul>
+                        <li><a href="#services" onclick="scrollToBooking('psychiatry')" data-translate="tabPsych">Psychiatry & Psychology</a></li>
+                        <li><a href="#services" onclick="scrollToBooking('orthopedics')" data-translate="tabOrtho">Pediatric Orthopedics</a></li>
+                        <li><a href="#services" onclick="scrollToBooking('speech')" data-translate="tabSpeech">Audiology & Speech Therapy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-translate="timingTitle">Working Hours</h4>
+                    <p data-translate="timingText">Mon - Sat: 9:30 AM - 8:30 PM (Sunday Holiday)</p>
+                    <p><i class="fa-solid fa-phone"></i> 9980999068</p>
+                    <p><i class="fa-solid fa-envelope"></i> contact@vkareclinic.com</p>
+                </div>
+            </div>
+            <div class="container footer-bottom">
+                <p data-translate="footerRights">© 2026 V-KARE Mind & Brain Clinic. All rights reserved.</p>
+                <p class="admin-trigger-link" id="admin-link" style="cursor:pointer; font-size:0.85rem;">Authorized Admin Log-In</p>
+            </div>
+        </footer>
+
+        <!-- EMERGENCY FLOATING BUTTONS (Call & WhatsApp) -->
+        <div class="floating-actions">
+            <a href="tel:9980999068" class="float-btn call">
+                <i class="fa-solid fa-phone"></i>
+                <span class="float-tooltip" data-translate="heroCall">Call Clinic</span>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=919980999068&text=Hi%20V-KARE%20Clinic,%20I%20have%20an%20inquiry." class="float-btn whatsapp" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span class="float-tooltip">WhatsApp Us</span>
+            </a>
+        </div>
+
+        <!-- AI CHAT ASSISTANT WIDGET -->
+        <div class="chat-widget">
+            <div class="chat-toggle" id="chat-toggle">
+                <i class="fa-solid fa-comment-dots"></i>
+                <div class="unread-badge">1</div>
+            </div>
+            
+            <div class="chat-box" id="chat-box">
+                <div class="chat-header">
+                    <div class="chat-header-info">
+                        <div class="chat-avatar"><i class="fa-solid fa-robot"></i></div>
+                        <div class="chat-status">
+                            <h4 data-translate="heroBadge2">V-KARE AI Assistant</h4>
+                            <p data-translate="chatBotStatus">Online Support</p>
+                        </div>
+                    </div>
+                    <div class="chat-close" id="chat-close">×</div>
+                </div>
+
+                <div class="chat-messages" id="chat-messages">
+                    <div class="chat-msg bot">
+                        <span data-translate="chatGreet">Hello! I am V-KARE's virtual assistant. How can I help you today?</span>
+                        <div class="chat-suggestions">
+                            <button class="chat-suggest-btn" onclick="askChatbot('appointment')" data-translate="chatAskApt">Book Appointment</button>
+                            <button class="chat-suggest-btn" onclick="askChatbot('doctors')" data-translate="chatAskDoc">Our Doctors</button>
+                            <button class="chat-suggest-btn" onclick="askChatbot('location')" data-translate="chatAskLoc">Location & Timings</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-input-area">
+                    <input type="text" class="chat-input" id="chat-input" placeholder="Type your query here..." data-translate="chatInputPlace">
+                    <button class="chat-send" id="chat-send"><i class="fa-regular fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOOKING CONFIRMATION MODAL -->
+        <div class="modal-overlay" id="booking-modal-overlay">
+            <div class="confirm-modal">
+                <div class="modal-icon"><i class="fa-regular fa-circle-check"></i></div>
+                <h3 data-translate="confirmTitle">Booking Successful!</h3>
+                <p data-translate="confirmDesc">Your appointment request has been recorded in our system. A clinic representative will call you shortly to confirm.</p>
+                <div class="modal-actions">
+                    <button class="btn btn-primary" onclick="sendWhatsAppConfirmation()" data-translate="confirmWa"><i class="fa-brands fa-whatsapp"></i> Confirm via WhatsApp</button>
+                    <button class="btn btn-secondary" onclick="closeBookingModal()" data-translate="confirmClose">Close & Back to Site</button>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- END MAIN SITE -->
+
+
+    <!-- ========================================== -->
+    <!--         2. PATIENT DASHBOARD PORTAL        -->
+    <!-- ========================================== -->
+    <div id="patient-dashboard" class="portal-dashboard">
+        <div class="container dashboard-wrapper">
+            <aside class="dashboard-sidebar">
+                <div class="user-profile-summary">
+                    <div class="user-avatar-placeholder"><i class="fa-solid fa-user"></i></div>
+                    <h3 id="pat-nav-name">Patient Portal</h3>
+                    <p>Consultations & History</p>
+                </div>
+                <div class="dashboard-menu">
+                    <button class="active" data-patient-tab="pat-appointments"><i class="fa-solid fa-calendar-check"></i> Bookings & Video</button>
+                    <button data-patient-tab="pat-notifications" id="pat-notif-tab-btn" style="position:relative;">
+                        <i class="fa-solid fa-bell"></i> Notifications
+                        <span class="badge-unread" id="pat-unread-badge" style="display:none; position:absolute; right:12px; top:50%; transform:translateY(-50%); background:#ef4444; color:#fff; font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:10px;">0</span>
+                    </button>
+                    <button data-patient-tab="pat-history"><i class="fa-solid fa-notes-medical"></i> Previous Consultations</button>
+                    <button data-patient-tab="pat-profile"><i class="fa-solid fa-user-gear"></i> Edit Profile & Security</button>
+                    <button onclick="logout()"><i class="fa-solid fa-sign-out-alt"></i> Logout</button>
+                </div>
+            </aside>
+
+            <main style="flex:1;">
+                <!-- Tab Panel 1: Appointments -->
+                <div class="dashboard-pane active" id="pat-appointments">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2rem;">
+                        <h2>Your Active Counselling Sessions</h2>
+                        <button class="btn btn-primary" onclick="openModal('booking-modal')"><i class="fa-solid fa-calendar-plus"></i> Book Online Slot</button>
+                    </div>
+                    <div id="patient-appointments-list"></div>
+                </div>
+
+                <!-- Tab Panel 2: Notifications -->
+                <div class="dashboard-pane" id="pat-notifications">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2rem; flex-wrap:wrap; gap:1rem;">
+                        <div>
+                            <h2>Notifications & Alerts</h2>
+                            <p style="color:var(--text-muted); font-size:0.9rem; margin-top:0.2rem;">Real-time appointment approvals, status updates, and instructions.</p>
+                        </div>
+                        <button class="btn btn-secondary" onclick="markAllNotificationsAsRead()" style="font-size:0.85rem; padding:0.5rem 1rem;"><i class="fa-solid fa-check-double"></i> Mark All as Read</button>
+                    </div>
+                    <div id="patient-notifications-list"></div>
+                </div>
+
+                <!-- Tab Panel 3: History -->
+                <div class="dashboard-pane" id="pat-history">
+                    <h2 style="margin-bottom:2rem;">Previous Consultations & Prescriptions</h2>
+                    <div id="patient-history-list"></div>
+                </div>
+
+                <!-- Tab Panel 3: Profile & Security -->
+                <div class="dashboard-pane" id="pat-profile">
+                    <h2 style="margin-bottom:2rem;">Manage Profile & Security Settings</h2>
+                    <div class="benefit-card" style="text-align:left;">
+                        <form id="pat-profile-form" onsubmit="updateProfile(event)">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label>Full Name</label>
+                                    <input type="text" id="pat-profile-name" required class="chat-input" style="width:100%; border:1px solid #ddd; padding:0.6rem 1rem; border-radius:8px;">
+                                </div>
+                                <div class="form-group">
+                                    <label>Phone Number</label>
+                                    <input type="tel" id="pat-profile-phone" required class="chat-input" style="width:100%; border:1px solid #ddd; padding:0.6rem 1rem; border-radius:8px;">
+                                </div>
+                                <div class="form-group">
+                                    <label>Age</label>
+                                    <input type="number" id="pat-profile-age" required class="chat-input" style="width:100%; border:1px solid #ddd; padding:0.6rem 1rem; border-radius:8px;">
+                                </div>
+                                <div class="form-group">
+                                    <label>Gender</label>
+                                    <select id="pat-profile-gender" class="chat-input" style="width:100%; border:1px solid #ddd; padding:0.6rem 1rem; border-radius:8px;">
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group full">
+                                    <label>City</label>
+                                    <input type="text" id="pat-profile-city" required class="chat-input" style="width:100%; border:1px solid #ddd; padding:0.6rem 1rem; border-radius:8px;">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="margin-top:1.5rem;">Save Settings</button>
+                        </form>
+                        
+                        <div style="margin-top:2rem; padding-top:2rem; border-top:1px solid rgba(0,0,0,0.05); display:flex; justify-content:space-between; align-items:center;">
+                            <div>
+                                <strong>Two-Factor Authentication (2FA)</strong>
+                                <p style="font-size:0.85rem; color:var(--text-muted); margin-top:0.2rem;">Enable email OTP checking on login for advanced account protection.</p>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="pat-2fa-enabled" style="transform: scale(1.5); cursor:pointer;" onchange="toggle2FA(this.checked)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+
+    <!-- ========================================== -->
+    <!--         3. DOCTOR PORTAL DASHBOARD         -->
+    <!-- ========================================== -->
+    <div id="doctor-dashboard" class="portal-dashboard">
+        <div class="container dashboard-wrapper">
+            <aside class="dashboard-sidebar">
+                <div class="user-profile-summary">
+                    <div class="user-avatar-placeholder"><i class="fa-solid fa-user-doctor"></i></div>
+                    <h3>Clinician Panel</h3>
+                    <p>Consultations & Records</p>
+                </div>
+                <div class="dashboard-menu">
+                    <button class="active" data-doctor-tab="doc-overview"><i class="fa-solid fa-notes-medical"></i> Today's Schedule</button>
+                    <button data-doctor-tab="doc-roster"><i class="fa-solid fa-clock-rotate-left"></i> Consultation History</button>
+                    <button onclick="logout()"><i class="fa-solid fa-sign-out-alt"></i> Logout</button>
+                </div>
+            </aside>
+
+            <main style="flex:1;">
+                <!-- Tab Panel 1: Today's Schedule -->
+                <div class="dashboard-pane active" id="doc-overview">
+                    <h2 style="margin-bottom:2rem;">Patient Consultation Schedule</h2>
+                    <div class="panel-card" style="background:#fff; padding:2rem; border-radius:16px; box-shadow:var(--shadow-sm);">
+                        <div class="table-responsive">
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>Patient Name</th>
+                                        <th>Session Type</th>
+                                        <th>Scheduled Slot</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="doctor-today-appointments"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Panel 2: Roster History -->
+                <div class="dashboard-pane" id="doc-roster">
+                    <h2 style="margin-bottom:2rem;">Previous Roster Records</h2>
+                    <div class="panel-card" style="background:#fff; padding:2rem; border-radius:16px; box-shadow:var(--shadow-sm);">
+                        <div class="table-responsive">
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>Patient Name</th>
+                                        <th>Counselling Type</th>
+                                        <th>Date & Slot</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="doctor-all-appointments"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+
+    <!-- ========================================== -->
+    <!--         4. CLINIC ADMIN DASHBOARD          -->
+    <!-- ========================================== -->
+    <div id="admin-section">
+        <div class="admin-container">
+            
+            <!-- Admin Dashboard Header -->
+            <div class="admin-header">
+                <div class="admin-title-area">
+                    <h2>V-KARE Clinic Portal</h2>
+                    <p>Administrative Control Dashboard</p>
+                </div>
+                <div class="action-btns">
+                    <button class="btn btn-secondary" id="admin-back-site" onclick="location.reload()" data-translate="adminBackSite">View Website</button>
+                    <button class="btn btn-primary" id="admin-logout" onclick="logout()" data-translate="adminLogout">Log Out</button>
+                </div>
+            </div>
+
+            <!-- Admin Sidebar Navigation tabs -->
+            <div class="admin-nav">
+                <button class="admin-nav-btn active" data-admin-tab="adm-overview" data-translate="adminNavDashboard">Overview & Analytics</button>
+                <button class="admin-nav-btn" data-admin-tab="adm-apts" data-translate="adminNavApts">Appointments List</button>
+                <button class="admin-nav-btn" data-admin-tab="adm-docs" data-translate="adminNavDocs">Doctors Roster</button>
+                <button class="admin-nav-btn" data-admin-tab="adm-logs">Audit Logs</button>
+                <button class="admin-nav-btn" data-admin-tab="adm-backups">Backups & Recovery</button>
+            </div>
+
+            <!-- TAB PANEL 1: OVERVIEW & STATS -->
+            <div class="admin-tab-panel active" id="adm-overview">
+                <!-- Quick Stat Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <h3 id="stat-visitors">0</h3>
+                            <p data-translate="adminTotalVisits">Total Visitors</p>
+                        </div>
+                        <div class="stat-icon"><i class="fa-regular fa-eye"></i></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <h3 id="stat-pending">0</h3>
+                            <p data-translate="adminPendingApts">Pending Bookings</p>
+                        </div>
+                        <div class="stat-icon"><i class="fa-solid fa-spinner"></i></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <h3 id="stat-approved">0</h3>
+                            <p data-translate="adminApprovedApts">Approved Slots</p>
+                        </div>
+                        <div class="stat-icon"><i class="fa-regular fa-calendar-check"></i></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <h3 id="stat-rejected">0</h3>
+                            <p data-translate="adminRejectedApts">Rejected Slots</p>
+                        </div>
+                        <div class="stat-icon"><i class="fa-regular fa-calendar-times"></i></div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <!-- Recent Bookings Table -->
+                    <div class="panel-card">
+                        <h3 data-translate="adminNavApts">Appointments List</h3>
+                        <div class="table-responsive">
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th data-translate="formName">Patient Name</th>
+                                        <th data-translate="formDoc">Doctor</th>
+                                        <th data-translate="formDate">Date</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="recent-apts-body">
+                                    <!-- Dynamic rows -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Department Distribution Chart -->
+                    <div class="panel-card">
+                        <h3 data-translate="adminChartTitle">Appointments by Department</h3>
+                        <div class="graph-container">
+                            <svg width="360" height="200" id="dept-chart-svg" style="background:#fff;"></svg>
+                            <div class="graph-legend">
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background:#0A4ABF;"></div>
+                                    <span>Psychiatry</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background:#00B4D8;"></div>
+                                    <span>Orthopedics</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background:#00C897;"></div>
+                                    <span>Speech & Aud</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB PANEL 2: APPOINTMENTS LIST MANAGEMENT -->
+            <div class="admin-tab-panel" id="adm-apts">
+                <div class="panel-card">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem; flex-wrap:wrap; gap:1rem;">
+                        <h3 data-translate="adminNavApts">Appointments List & Approvals</h3>
+                        <!-- Status Filter Buttons -->
+                        <div class="apt-status-filters" style="display:flex; gap:0.4rem; flex-wrap:wrap;">
+                            <button class="filter-btn active" data-status-filter="all" onclick="setAdminAptFilter('all', event)" style="padding:0.3rem 0.8rem; border-radius:15px; border:1px solid #cbd5e1; background:#f8fafc; font-size:0.8rem; font-weight:600; cursor:pointer;">All</button>
+                            <button class="filter-btn" data-status-filter="pending" onclick="setAdminAptFilter('pending', event)" style="padding:0.3rem 0.8rem; border-radius:15px; border:1px solid #fde68a; background:#fef3c7; color:#92400e; font-size:0.8rem; font-weight:600; cursor:pointer;">Pending</button>
+                            <button class="filter-btn" data-status-filter="approved" onclick="setAdminAptFilter('approved', event)" style="padding:0.3rem 0.8rem; border-radius:15px; border:1px solid #bbf7d0; background:#dcfce7; color:#166534; font-size:0.8rem; font-weight:600; cursor:pointer;">Approved</button>
+                            <button class="filter-btn" data-status-filter="rejected" onclick="setAdminAptFilter('rejected', event)" style="padding:0.3rem 0.8rem; border-radius:15px; border:1px solid #fecaca; background:#fee2e2; color:#991b1b; font-size:0.8rem; font-weight:600; cursor:pointer;">Rejected</button>
+                            <button class="filter-btn" data-status-filter="paid" onclick="setAdminAptFilter('paid', event)" style="padding:0.3rem 0.8rem; border-radius:15px; border:1px solid #bfdbfe; background:#dbeafe; color:#1e40af; font-size:0.8rem; font-weight:600; cursor:pointer;">Paid</button>
+                            <button class="filter-btn" data-status-filter="completed" onclick="setAdminAptFilter('completed', event)" style="padding:0.3rem 0.8rem; border-radius:15px; border:1px solid #e2e8f0; background:#f1f5f9; color:#475569; font-size:0.8rem; font-weight:600; cursor:pointer;">Completed</button>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th data-translate="formName">Patient Name & ID</th>
+                                    <th data-translate="formDept">Department / Doctor</th>
+                                    <th data-translate="formDate">Schedule</th>
+                                    <th data-translate="formMode">Mode</th>
+                                    <th>Status</th>
+                                    <th>Notifications Delivery</th>
+                                    <th>Approval / Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="admin-apts-body">
+                                <!-- Dynamic rows -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB PANEL 3: DOCTOR ROSTER MANAGEMENT (CRUD) -->
+            <div class="admin-tab-panel" id="adm-docs">
+                <div class="crud-grid">
+                    <!-- Form card -->
+                    <div class="panel-card">
+                        <h3 id="admin-doc-form-title" data-translate="adminFormDocTitle">Add / Edit Doctor Profile</h3>
+                        <form id="admin-doc-form">
+                            <div class="form-group" style="margin-bottom:1.2rem;">
+                                <label for="doc-form-name" data-translate="adminFormDocName">Doctor Name</label>
+                                <input type="text" id="doc-form-name" placeholder="Dr. John Doe" required>
+                            </div>
+                            <div class="form-group" style="margin-bottom:1.2rem;">
+                                <label for="doc-form-name-kn">Doctor Name (Kannada)</label>
+                                <input type="text" id="doc-form-name-kn" placeholder="ಡಾ. ಜಾನ್ ಡೋ" required>
+                            </div>
+                            <div class="form-group" style="margin-bottom:1.2rem;">
+                                <label for="doc-form-qual" data-translate="adminFormDocQual">Qualifications</label>
+                                <input type="text" id="doc-form-qual" placeholder="MD (Psychiatry), DPM" required>
+                            </div>
+                            <div class="form-group" style="margin-bottom:1.2rem;">
+                                <label for="doc-form-dept" data-translate="formDept">Department</label>
+                                <select id="doc-form-dept" required>
+                                    <option value="" disabled selected data-translate="formDept">Select Department</option>
+                                    <option value="psychiatry" data-translate="deptPsych">Psychiatry & Psychology</option>
+                                    <option value="orthopedics" data-translate="deptOrtho">Pediatric Orthopedics</option>
+                                    <option value="speech" data-translate="deptSpeech">Audiology & Speech Therapy</option>
+                                </select>
+                            </div>
+                            <div class="form-group" style="margin-bottom:1.2rem;">
+                                <label for="doc-form-spec" data-translate="adminFormDocSpec">Specialization (English)</label>
+                                <input type="text" id="doc-form-spec" placeholder="Psychiatrist & Mental Wellness Expert" required>
+                            </div>
+                            <div class="form-group" style="margin-bottom:1.2rem;">
+                                <label for="doc-form-spec-kn">Specialization (Kannada)</label>
+                                <input type="text" id="doc-form-spec-kn" placeholder="ಮನೋವೈದ್ಯರು ಮತ್ತು ಮಾನಸಿಕ ಸ್ವಾಸ್ಥ್ಯ ತಜ್ಞರು" required>
+                            </div>
+                            <div class="form-group" style="margin-bottom:1.2rem;">
+                                <label for="doc-form-exp" data-translate="adminFormDocExp">Experience (English)</label>
+                                <input type="text" id="doc-form-exp" placeholder="10+ Years Experience" required>
+                            </div>
+                            <div class="form-group" style="margin-bottom:1.2rem;">
+                                <label for="doc-form-exp-kn">Experience (Kannada)</label>
+                                <input type="text" id="doc-form-exp-kn" placeholder="೧೦+ ವರ್ಷಗಳ ಅನುಭವ" required>
+                            </div>
+                            <div class="form-group" style="margin-bottom:1.2rem;">
+                                <label for="doc-form-hours" data-translate="adminFormDocHours">Consultation Hours (English)</label>
+                                <input type="text" id="doc-form-hours" placeholder="Mon - Sat: 10:00 AM - 1:00 PM" required>
+                            </div>
+                            <div class="form-group" style="margin-bottom:1.2rem;">
+                                <label for="doc-form-hours-kn">Consultation Hours (Kannada)</label>
+                                <input type="text" id="doc-form-hours-kn" placeholder="ಸೋಮ - ಶನಿ: ಬೆಳಿಗ್ಗೆ 10:00 - ಮಧ್ಯಾಹ್ನ 1:00" required>
+                            </div>
+                            <div class="form-group" style="margin-bottom:1.2rem;">
+                                <label for="doc-form-avatar">Roster Icon Avatar</label>
+                                <select id="doc-form-avatar" required>
+                                    <option value="🧠">🧠 Brain (Psychiatry)</option>
+                                    <option value="👩‍⚕️">👩‍⚕️ Female Doctor</option>
+                                    <option value="👨‍⚕️">👨‍⚕️ Male Doctor</option>
+                                    <option value="🦴">🦴 Bone (Orthopedics)</option>
+                                    <option value="🗣️">🗣️ Talking (Speech Therapy)</option>
+                                </select>
+                            </div>
+                            <div class="form-group" style="margin-bottom:1.2rem;">
+                                <label for="doc-form-online">Online Video Consultation?</label>
+                                <select id="doc-form-online" required>
+                                    <option value="yes">Yes, Available</option>
+                                    <option value="no">No, In-Person Only</option>
+                                </select>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" style="width:100%;" data-translate="adminFormDocSave">Save Specialist Info</button>
+                        </form>
+                    </div>
+
+                    <!-- List card -->
+                    <div class="panel-card">
+                        <h3 data-translate="navDoctors">Specialists</h3>
+                        <div class="table-responsive">
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>Icon</th>
+                                        <th data-translate="adminFormDocName">Doctor Name</th>
+                                        <th data-translate="formDept">Department</th>
+                                        <th data-translate="adminFormDocHours">Hours</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="admin-docs-body">
+                                    <!-- Dynamic rows -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB PANEL 4: AUDIT LOGS -->
+            <div class="admin-tab-panel" id="adm-logs">
+                <div class="panel-card">
+                    <h3>System Access & Audit Trail Logs</h3>
+                    <div class="table-responsive" style="margin-top:1.5rem;">
+                        <table class="audit-table">
+                            <thead>
+                                <tr>
+                                    <th>Timestamp</th>
+                                    <th>User Email</th>
+                                    <th>Trigger Action</th>
+                                    <th>IP Address</th>
+                                </tr>
+                            </thead>
+                            <tbody id="admin-audit-logs-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB PANEL 5: SYSTEM BACKUPS -->
+            <div class="admin-tab-panel" id="adm-backups">
+                <div class="panel-card">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+                        <h3>System Backups & Recovery</h3>
+                        <button class="btn btn-primary" onclick="triggerDatabaseBackup()"><i class="fa-solid fa-database"></i> Generate Database Backup Now</button>
+                    </div>
+                    <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:2rem;">Restore the system to a previous state by selecting an existing database backup file below.</p>
+                    <ul id="admin-backups-list" style="padding-left:0; list-style:none;"></ul>
+                </div>
+            </div>
+
+        </div>
+    </div> <!-- END ADMIN SECTION -->
+
+
+    <!-- PORTAL DIALOG MODALS -->
+
+    <!-- ADMIN LOGIN MODAL -->
+    <div id="admin-login-modal" class="portal-modal">
+        <div class="portal-modal-content">
+            <h3 style="margin-bottom:0.5rem; text-align:center;">V-KARE Admin Portal Login</h3>
+            <p style="text-align:center; font-size:0.9rem; color:var(--text-muted); margin-bottom:1.5rem;">Authorized Administrator Access Only.</p>
+            <form id="admin-login-form">
+                <div class="form-group" style="margin-bottom:1rem;">
+                    <label style="display:block; margin-bottom:0.3rem; font-weight:600;">Username</label>
+                    <input type="text" id="login-username" required placeholder="admin" value="admin" class="chat-input" style="width:100%; border:1px solid #ddd; padding:0.6rem 1rem; border-radius:8px;">
+                </div>
+                <div class="form-group" style="margin-bottom:1rem;">
+                    <label style="display:block; margin-bottom:0.3rem; font-weight:600;">Password</label>
+                    <input type="password" id="login-password" required placeholder="vkareadmin123" value="vkareadmin123" class="chat-input" style="width:100%; border:1px solid #ddd; padding:0.6rem 1rem; border-radius:8px;">
+                </div>
+                <div id="login-error" style="color:#ef4444; display:none; margin-bottom:1rem; text-align:center; font-size:0.9rem; font-weight:600;">Invalid Credentials</div>
+                <button type="submit" class="btn btn-primary" style="width:100%; margin-top:1rem; padding:0.7rem;">Log In to Admin Dashboard</button>
+            </form>
+            <div style="text-align:center; margin-top:1rem;"><button class="btn btn-secondary close-modal-btn" id="close-login" style="padding:0.4rem 1.2rem;">Cancel</button></div>
+        </div>
+    </div>
+
+    <!-- ADMIN APPOINTMENT STATUS APPROVAL / REJECTION MODAL -->
+    <div id="admin-status-modal" class="portal-modal">
+        <div class="portal-modal-content">
+            <h3 id="admin-status-modal-title" style="margin-bottom:0.5rem; text-align:center;">Approve Appointment</h3>
+            <p style="text-align:center; font-size:0.9rem; color:var(--text-muted); margin-bottom:1.5rem;" id="admin-status-modal-desc">Send notification to patient upon status update.</p>
+            <form id="admin-status-form" onsubmit="submitAdminStatusChange(event)">
+                <input type="hidden" id="admin-status-apt-id">
+                <input type="hidden" id="admin-status-target">
+
+                <div class="form-group" id="admin-instructions-group" style="margin-bottom:1rem;">
+                    <label style="display:block; margin-bottom:0.3rem; font-weight:600;">Important Patient Instructions (Optional)</label>
+                    <textarea id="admin-status-instructions" rows="3" placeholder="e.g. Please log in 10 minutes prior to your video slot, ensure quiet environment..." class="chat-input" style="width:100%; border:1px solid #ddd; padding:0.6rem 1rem; border-radius:8px; resize:none;"></textarea>
+                </div>
+
+                <div class="form-group" id="admin-reason-group" style="margin-bottom:1rem; display:none;">
+                    <label style="display:block; margin-bottom:0.3rem; font-weight:600;">Rejection Reason (Required)</label>
+                    <textarea id="admin-status-reason" rows="3" placeholder="e.g. Doctor unavailable at this time slot, please choose another slot..." class="chat-input" style="width:100%; border:1px solid #ddd; padding:0.6rem 1rem; border-radius:8px; resize:none;"></textarea>
+                </div>
+
+                <button type="submit" id="admin-status-submit-btn" class="btn btn-primary" style="width:100%; margin-top:1rem; padding:0.7rem;">Confirm & Send Notification</button>
+            </form>
+            <div style="text-align:center; margin-top:1rem;"><button class="btn btn-secondary close-modal-btn" onclick="closeModal('admin-status-modal')" style="padding:0.4rem 1.2rem;">Cancel</button></div>
+        </div>
+    </div>
+
+    <!-- DOCTOR PROFILE DETAIL MODAL -->
+    <div id="doctor-detail-modal" class="portal-modal">
+        <div class="portal-modal-content wide" style="max-width:700px; padding:2rem; border-radius:16px;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.5rem;">
+                <div style="display:flex; gap:1.2rem; align-items:center;">
+                    <div id="doc-modal-avatar" style="font-size:3.5rem; background:linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); width:85px; height:85px; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 10px rgba(0,0,0,0.1); flex-shrink:0;">🧠</div>
+                    <div>
+                        <h3 id="doc-modal-name" style="margin:0 0 0.2rem 0; font-size:1.4rem; color:#0f172a;">Doctor Name</h3>
+                        <p id="doc-modal-qual" style="margin:0; font-size:0.85rem; color:#0284c7; font-weight:700;">Qualifications</p>
+                        <span id="doc-modal-spec" style="font-size:0.9rem; color:#475569;">Specialization</span>
+                    </div>
+                </div>
+                <button class="btn btn-secondary close-modal-btn" onclick="closeModal('doctor-detail-modal')" style="border:none; background:none; font-size:1.6rem; color:#64748b; cursor:pointer;">&times;</button>
+            </div>
+
+            <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:1.2rem; margin-bottom:1.5rem; display:grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap:1rem;">
+                <div>
+                    <small style="color:#64748b; font-size:0.75rem; text-transform:uppercase; font-weight:700;">License Verification</small>
+                    <div id="doc-modal-license" style="font-weight:700; color:#1e40af; font-size:0.85rem; margin-top:0.2rem;"><i class="fa-solid fa-certificate" style="color:#10b981;"></i> KMC Reg. No. 78241</div>
+                </div>
+                <div>
+                    <small style="color:#64748b; font-size:0.75rem; text-transform:uppercase; font-weight:700;">Clinical Exp.</small>
+                    <div id="doc-modal-exp" style="font-weight:700; color:#0f172a; font-size:0.85rem; margin-top:0.2rem;"><i class="fa-solid fa-briefcase"></i> 12+ Years</div>
+                </div>
+                <div>
+                    <small style="color:#64748b; font-size:0.75rem; text-transform:uppercase; font-weight:700;">Patient Rating</small>
+                    <div id="doc-modal-rating" style="font-weight:700; color:#b45309; font-size:0.85rem; margin-top:0.2rem;">⭐ 4.9 (142 Reviews)</div>
+                </div>
+                <div>
+                    <small style="color:#64748b; font-size:0.75rem; text-transform:uppercase; font-weight:700;">Consultation Fee</small>
+                    <div id="doc-modal-fee" style="font-weight:700; color:#15803d; font-size:0.85rem; margin-top:0.2rem;">₹600 / Session</div>
+                </div>
+            </div>
+
+            <div style="margin-bottom:1.5rem;">
+                <h4 style="margin-bottom:0.4rem; color:#0f172a; font-size:1rem;"><i class="fa-solid fa-user-doctor" style="color:#0284c7;"></i> Clinical Bio & Background</h4>
+                <p id="doc-modal-bio" style="font-size:0.92rem; color:#334155; line-height:1.6; margin:0;">Bio content...</p>
+            </div>
+
+            <div style="margin-bottom:1.5rem;">
+                <h4 style="margin-bottom:0.6rem; color:#0f172a; font-size:1rem;"><i class="fa-solid fa-tags" style="color:#0284c7;"></i> Specialization & Conditions Treated</h4>
+                <div id="doc-modal-tags" style="display:flex; flex-wrap:wrap; gap:0.5rem;"></div>
+            </div>
+
+            <div style="margin-bottom:1.5rem; background:#f0fdf4; border:1px solid #bbf7d0; padding:1rem 1.2rem; border-radius:10px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+                <div>
+                    <h5 style="margin:0; color:#166534; font-size:0.85rem;"><i class="fa-regular fa-clock"></i> Consultation Hours</h5>
+                    <span id="doc-modal-hours" style="font-size:0.85rem; color:#15803d; font-weight:600;">Mon - Sat: 10:00 AM - 1:00 PM</span>
+                </div>
+                <div>
+                    <h5 style="margin:0; color:#166534; font-size:0.85rem;"><i class="fa-solid fa-language"></i> Languages Spoken</h5>
+                    <span id="doc-modal-languages" style="font-size:0.85rem; color:#15803d; font-weight:600;">English, Kannada, Hindi</span>
+                </div>
+            </div>
+
+            <button id="doc-modal-book-btn" class="btn btn-primary" style="width:100%; padding:0.8rem; font-size:1rem; font-weight:700;">
+                <i class="fa-solid fa-calendar-check"></i> Book Consultation Slot with Doctor
+            </button>
+        </div>
+    </div>
+
+    <!-- LICENSED EXPERTS EXPLORER DIRECTORY MODAL -->
+    <div id="licensed-experts-modal" class="portal-modal">
+        <div class="portal-modal-content wide" style="max-width:900px; padding:2rem; border-radius:16px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem; flex-wrap:wrap; gap:1rem;">
+                <div>
+                    <h2 style="margin:0; color:#0f172a; display:flex; align-items:center; gap:0.6rem; font-size:1.5rem;">
+                        <i class="fa-solid fa-user-nurse" style="color:#0284c7;"></i> V-KARE Certified Licensed Medical Experts
+                    </h2>
+                    <p style="margin:0.2rem 0 0 0; color:#64748b; font-size:0.9rem;">Board-certified psychiatrists, clinical psychologists, pediatric orthopedic surgeons, and speech pathologists.</p>
+                </div>
+                <button class="btn btn-secondary close-modal-btn" onclick="closeModal('licensed-experts-modal')" style="border:none; background:none; font-size:1.6rem; color:#64748b; cursor:pointer;">&times;</button>
+            </div>
+
+            <div style="margin-bottom:1.5rem;">
+                <input type="text" id="expert-search-input" onkeyup="searchLicensedExperts()" placeholder="🔍 Search by specialist name, license number, or treatment condition (e.g. ADHD, Depression, Speech)..." class="chat-input" style="width:100%; padding:0.8rem 1.2rem; border-radius:10px; border:1px solid #cbd5e1; font-size:0.95rem;">
+            </div>
+
+            <div id="licensed-experts-modal-list" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap:1.2rem; max-height:550px; overflow-y:auto; padding-right:0.5rem;"></div>
+        </div>
+    </div>
+
+    <!-- BOOKING MODAL -->
+    <div id="booking-modal" class="portal-modal">
+        <div class="portal-modal-content wide">
+            <h3 style="margin-bottom:1rem;">Book Online Counselling Session</h3>
+            <form id="booking-session-form" onsubmit="submitBookingForm(event)">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Counselling Specialty</label>
+                        <select id="book-session-type" required class="chat-input" style="width:100%; border:1px solid #ddd; padding:0.6rem 1rem; border-radius:8px;">
+                            <option value="Individual">Individual Counselling</option>
+                            <option value="Couple">Couple Counselling</option>
+                            <option value="Child">Child therapy / Counselor</option>
+                            <option value="Family">Family Counselling</option>
+                            <option value="Anxiety">Anxiety Management</option>
+                            <option value="Depression">Clinical Depression</option>
+                            <option value="Stress Management">Stress Management</option>
+                            <option value="Career Guidance">Career Guidance</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Choose Date</label>
+                        <input type="date" id="book-session-date" required class="chat-input" style="width:100%; border:1px solid #ddd; padding:0.6rem 1rem; border-radius:8px;">
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Time Slot</label>
+                        <select id="book-session-time" required class="chat-input" style="width:100%; border:1px solid #ddd; padding:0.6rem 1rem; border-radius:8px;">
+                            <option value="10:00 AM">10:00 AM - 11:00 AM</option>
+                            <option value="11:30 AM">11:30 AM - 12:30 PM</option>
+                            <option value="02:30 PM">02:30 PM - 03:30 PM</option>
+                            <option value="05:00 PM">05:00 PM - 06:00 PM</option>
+                            <option value="06:30 PM">06:30 PM - 07:30 PM</option>
+                        </select>
+                    </div>
+                    <div class="form-group full">
+                        <label>Reason for Consultation</label>
+                        <textarea id="book-session-reason" rows="3" placeholder="Briefly describe what you'd like support with..." class="chat-input" style="width:100%; border:1px solid #ddd; padding:0.6rem 1rem; border-radius:8px; resize:none;"></textarea>
+                    </div>
+                    <div class="form-group full">
+                        <label>Previous Medical Records / Reports (Optional, PNG/JPG/PDF <= 5MB)</label>
+                        <input type="file" id="book-session-report" class="chat-input" style="width:100%; border:1px solid #ddd; padding:0.6rem 1rem; border-radius:8px;">
+                    </div>
+                </div>
+                <div style="display:flex; justify-content:flex-end; gap:1rem; margin-top:2rem;">
+                    <button type="button" class="btn btn-secondary close-modal-btn" style="padding:0.6rem 1.5rem;">Cancel</button>
+                    <button type="submit" class="btn btn-primary" style="padding:0.6rem 1.5rem;">Book Session Slot</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MOCK PAYMENT CHECKOUT MODAL -->
+    <div id="payment-modal" class="portal-modal">
+        <div class="portal-modal-content">
+            <h3 style="margin-bottom:0.5rem; text-align:center;">Secure Consultation Checkout</h3>
+            <p style="text-align:center; font-size:0.9rem; color:var(--text-muted); margin-bottom:1.5rem;">Patient Reference Appointment ID: <strong id="pay-appointment-id"></strong></p>
+            <div style="background:var(--bg-ice); padding:1rem; border-radius:8px; text-align:center; margin-bottom:1.5rem;">
+                <span style="font-size:0.9rem; color:var(--text-light);">Consultation Fee</span>
+                <h2 style="color:var(--portal-primary); margin-top:0.3rem;">₹<span id="pay-amount"></span>.00</h2>
+            </div>
+            <form id="payment-checkout-form">
+                <label style="font-weight:600; display:block; margin-bottom:0.8rem;">Select Payment Method</label>
+                <div style="display:flex; flex-direction:column; gap:0.8rem; margin-bottom:2rem;">
+                    <label style="display:flex; align-items:center; gap:1rem; padding:0.8rem; border:1px solid #ddd; border-radius:8px; cursor:pointer;">
+                        <input type="radio" name="payment-method" value="UPI" checked style="transform:scale(1.2);">
+                        <span><i class="fa-solid fa-mobile-screen"></i> UPI Payment (Google Pay / PhonePe / Paytm)</span>
+                    </label>
+                    <label style="display:flex; align-items:center; gap:1rem; padding:0.8rem; border:1px solid #ddd; border-radius:8px; cursor:pointer;">
+                        <input type="radio" name="payment-method" value="Card" style="transform:scale(1.2);">
+                        <span><i class="fa-regular fa-credit-card"></i> Credit Card / Debit Card</span>
+                    </label>
+                    <label style="display:flex; align-items:center; gap:1rem; padding:0.8rem; border:1px solid #ddd; border-radius:8px; cursor:pointer;">
+                        <input type="radio" name="payment-method" value="NetBanking" style="transform:scale(1.2);">
+                        <span><i class="fa-solid fa-building-columns"></i> Net Banking</span>
+                    </label>
+                    <label style="display:flex; align-items:center; gap:1rem; padding:0.8rem; border:1px solid #ddd; border-radius:8px; cursor:pointer;">
+                        <input type="radio" name="payment-method" value="Wallet" style="transform:scale(1.2);">
+                        <span><i class="fa-solid fa-wallet"></i> Digital Wallets</span>
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%; padding:0.8rem;">Authorize & Complete Payment</button>
+            </form>
+            <div style="text-align:center; margin-top:1.5rem;">
+                <small style="color:var(--text-muted);"><i class="fa-solid fa-lock"></i> Secured with AES-256 SSL Encryption</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- VIDEO ROOM MODAL -->
+    <div id="video-room-modal" class="portal-modal">
+        <div class="portal-modal-content wide" style="background:#0f172a; border-color:rgba(255,255,255,0.1); color:#fff;">
+            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:1rem; margin-bottom:1rem;">
+                <div>
+                    <h3 style="color:#fff;"><i class="fa-solid fa-circle" style="color:var(--portal-success); font-size:0.8rem; animation:pulse 1.5s infinite; margin-right:0.5rem;"></i> Secure Session: <span id="video-room-patient-name" style="color:var(--secondary);"></span></h3>
+                    <small style="color:#94a3b8;">Session is end-to-end encrypted.</small>
+                </div>
+                <div style="display:flex; align-items:center; gap:1rem;">
+                    <div style="background:#1e293b; padding:0.4rem 1rem; border-radius:20px; font-weight:600; font-family:monospace; color:#38bdf8;" id="session-timer-display">45:00</div>
+                </div>
+            </div>
+
+            <div class="meeting-layout">
+                <!-- Video Streams -->
+                <div>
+                    <div class="meeting-container">
+                        <div class="video-grid-container">
+                            <div class="video-box">
+                                <video id="local-video-element" autoplay playsinline style="display:none;"></video>
+                                <div class="placeholder-user" id="local-video-placeholder"><i class="fa-solid fa-video-slash"></i></div>
+                                <div class="video-label">You (Camera Feed)</div>
+                            </div>
+                            <div class="video-box">
+                                <div class="placeholder-user"><i class="fa-solid fa-user-doctor"></i></div>
+                                <div class="video-label">Therapist/Client Screen</div>
+                            </div>
+                        </div>
+                        <div class="video-controls">
+                            <button id="video-btn-audio" class="control-btn active" onclick="toggleAudio()"><i class="fa-solid fa-microphone"></i></button>
+                            <button id="video-btn-camera" class="control-btn active" onclick="toggleVideo()"><i class="fa-solid fa-video"></i></button>
+                            <button id="video-btn-screenshare" class="control-btn" onclick="toggleScreenShare()"><i class="fa-solid fa-desktop"></i></button>
+                            <button class="control-btn danger" onclick="endConsultationCall()"><i class="fa-solid fa-phone-slash"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat & Notes side column -->
+                <div style="display:flex; flex-direction:column; gap:1rem; padding:0 0 0 1rem;">
+                    <!-- Session Notes (Doctor only) -->
+                    <div id="doctor-notes-area" style="display:none; background:#1e293b; padding:1rem; border-radius:8px; border:1px solid rgba(255,255,255,0.1);">
+                        <h4 style="color:#fff; margin-bottom:0.8rem;">Clinical Notes & Prescription</h4>
+                        <form id="consultation-completion-form" onsubmit="submitConsultationNotes(event)">
+                            <input type="hidden" id="session-complete-appointment-id">
+                            <textarea id="session-doctor-notes" rows="4" required placeholder="Write consultation notes here..." class="chat-input" style="width:100%; background:#334155; border:1px solid rgba(255,255,255,0.1); color:#fff; padding:0.6rem; border-radius:8px; font-size:0.85rem; resize:none; margin-bottom:0.8rem;"></textarea>
+                            <label style="font-size:0.8rem; display:block; margin-bottom:0.4rem;">Upload Prescription (PDF/PNG)</label>
+                            <input type="file" id="session-doctor-prescription" class="chat-input" style="width:100%; background:#334155; border:1px solid rgba(255,255,255,0.1); color:#fff; padding:0.4rem; border-radius:8px; font-size:0.8rem; margin-bottom:1rem;">
+                            <button type="submit" class="btn btn-primary" style="width:100%; font-size:0.85rem; padding:0.5rem;">Save & Close Session</button>
+                        </form>
+                    </div>
+
+                    <!-- Chat pane -->
+                    <div class="meeting-chat" style="border-radius:8px; overflow:hidden;">
+                        <div class="chat-room-messages" id="video-chat-messages">
+                            <div style="font-size:0.8rem; color:#94a3b8; text-align:center; padding:0.5rem 0;">Text Chat Enabled</div>
+                        </div>
+                        <div class="chat-room-input-area">
+                            <input type="text" id="video-chat-input" placeholder="Type message..." onkeydown="if(event.key === 'Enter') sendSessionChatMessage()">
+                            <button class="btn btn-primary" onclick="sendSessionChatMessage()" style="padding:0.4rem 0.8rem;"><i class="fa-regular fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+    <script src="portal.js"></script>
+</body>
+</html>
