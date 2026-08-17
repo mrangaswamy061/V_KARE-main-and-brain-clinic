@@ -2210,6 +2210,16 @@ html, body {
         padding: 0.5rem 1rem !important;
     }
 
+    /* Doctor Cards Mobile Optimization */
+    .doc-img-container {
+        height: 155px !important;
+    }
+
+    .doc-img-container img {
+        object-fit: cover !important;
+        object-position: top center !important;
+    }
+
     /* Form Controls Touch Optimization */
     .form-group input,
     .form-group select,

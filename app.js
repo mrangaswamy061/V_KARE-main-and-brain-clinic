@@ -20,7 +20,8 @@ const SEED_DATA = {
             hours: "Mon - Sat: 10:00 AM - 1:00 PM, 5:00 PM - 8:00 PM",
             hoursKn: "ಸೋಮ - ಶನಿ: ಬೆಳಿಗ್ಗೆ 10:00 - ಮಧ್ಯಾಹ್ನ 1:00, ಸಂಜೆ 5:00 - ರಾತ್ರಿ 8:00",
             dept: "psychiatry",
-            avatar: "🧠",
+            avatar: "👨‍⚕️",
+            photoUrl: "images/doc_vinay.jpg",
             onlineAvail: true,
             bio: "Dr. Vinay Kumar is an acclaimed Psychiatrist trained at NIMHANS with 12+ years of clinical excellence in treating clinical depression, bipolar disorder, panic anxiety, OCD, and stress management through evidence-based pharmacological and CBT counseling therapies.",
             bioKn: "ಡಾ. ವಿನಯ್ ಕುಮಾರ್ ಅವರು ನಿಮ್ಹಾನ್ಸ್‌ನಿಂದ ತರಬೇತಿ ಪಡೆದ ಪ್ರಸಿದ್ಧ ಮನೋವೈದ್ಯರಾಗಿದ್ದು, ಖಿನ್ನತೆ, ಆತಂಕ ಮತ್ತು ಒತ್ತಡ ನಿವಾರಣೆಯಲ್ಲಿ ೧೨ಕ್ಕೂ ಹೆಚ್ಚು ವರ್ಷಗಳ ಅನುಭವ ಹೊಂದಿದ್ದಾರೆ.",
@@ -44,6 +45,7 @@ const SEED_DATA = {
             hoursKn: "ಸೋಮ - ಶುಕ್ರ: ಮಧ್ಯಾಹ್ನ 2:00 - ಸಂಜೆ 6:00",
             dept: "psychiatry",
             avatar: "👩‍⚕️",
+            photoUrl: "images/doc_anitha.jpg",
             onlineAvail: true,
             bio: "Dr. Anitha K. is a licensed Rehabilitation Council of India (RCI) Clinical Psychologist specializing in ADHD behavioral therapy, IQ testing, adolescent counseling, trauma recovery, and family psychotherapy.",
             bioKn: "ಡಾ. ಅನಿತಾ ಕೆ. ಅವರು ಆರ್‌ಸಿಐ ಮಾನ್ಯತೆ ಪಡೆದ ಕ್ಲಿನಿಕಲ್ ಸೈಕಾಲಜಿಸ್ಟ್ ಆಗಿದ್ದು, ಮಕ್ಕಳ ನಡವಳಿಕೆ, ಎಡಿಎಚ್‌ಡಿ ಮತ್ತು ಕೌಟುಂಬಿಕ ಆಪ್ತಸಮಾಲೋಚನೆಯಲ್ಲಿ ಪರಿಣಿತರು.",
@@ -66,7 +68,8 @@ const SEED_DATA = {
             hours: "Tue, Thu, Sat: 4:00 PM - 7:00 PM",
             hoursKn: "ಮಂಗಳ, ಗುರು, ಶನಿ: ಸಂಜೆ 4:00 - ರಾತ್ರಿ 7:00",
             dept: "orthopedics",
-            avatar: "🦴",
+            avatar: "👨‍⚕️",
+            photoUrl: "images/doc_kiran.jpg",
             onlineAvail: false,
             bio: "Dr. Kiran R. S. completed fellowship training in Pediatric Orthopedics in the UK. He specializes in Ponseti clubfoot correction, pediatric bone deformity corrections, cerebral palsy gait rehabilitation, and pediatric trauma management.",
             bioKn: "ಡಾ. ಕಿರಣ್ ಆರ್. ಎಸ್. ಅವರು ಯುಕೆ ಯಲ್ಲಿ ಮಕ್ಕಳ ಮೂಳೆ ಚಿಕಿತ್ಸೆಯ ಫೆಲೋಶಿಪ್ ಪಡೆದಿದ್ದು, ಕ್ಲಬ್‌ಫುಟ್ ಮತ್ತು ಮೂಳೆ ವೈಪರೀತ್ಯಗಳ ನಿವಾರಣೆಯಲ್ಲಿ ನುರಿತವರು.",
@@ -89,7 +92,8 @@ const SEED_DATA = {
             hours: "Mon - Sat: 9:30 AM - 1:30 PM, 3:30 PM - 6:30 PM",
             hoursKn: "ಸೋಮ - ಶನಿ: ಬೆಳಿಗ್ಗೆ 9:30 - ಮಧ್ಯಾಹ್ನ 1:30, ಸಂಜೆ 3:30 - 6:30",
             dept: "speech",
-            avatar: "🗣️",
+            avatar: "👩‍⚕️",
+            photoUrl: "images/doc_shwetha.jpg",
             onlineAvail: true,
             bio: "Mrs. Shwetha G. is an RCI-registered Speech Pathologist with extensive experience in pediatric articulation disorders, stammering/stuttering therapy, autism spectrum communication therapy, and digital audiometric evaluations.",
             bioKn: "ಶ್ರೀಮತಿ ಶ್ವೇತಾ ಜಿ. ಅವರು ಮಾತು ಮತ್ತು ಶ್ರವಣ ಚಿಕಿತ್ಸೆಯಲ್ಲಿ ೬ ವರ್ಷಕ್ಕೂ ಹೆಚ್ಚು ಅನುಭವ ಹೊಂದಿದ್ದು, ತೋತಲಾಡುವಿಕೆ ಮತ್ತು ಆಟಿಸಂ ಮಕ್ಕಳ ಸಂವಹನ ಚಿಕಿತ್ಸೆಯಲ್ಲಿ ಪರಿಣಿತರು.",
@@ -184,6 +188,22 @@ const SEED_DATA = {
 function initLocalStorage() {
     if (!localStorage.getItem('vkare_doctors')) {
         localStorage.setItem('vkare_doctors', JSON.stringify(SEED_DATA.doctors));
+    } else {
+        // Sync photos to existing local storage doctors if missing
+        try {
+            let docs = JSON.parse(localStorage.getItem('vkare_doctors'));
+            let updated = false;
+            docs.forEach(d => {
+                const seedDoc = SEED_DATA.doctors.find(s => s.id === d.id);
+                if (seedDoc && seedDoc.photoUrl && !d.photoUrl) {
+                    d.photoUrl = seedDoc.photoUrl;
+                    updated = true;
+                }
+            });
+            if (updated) {
+                localStorage.setItem('vkare_doctors', JSON.stringify(docs));
+            }
+        } catch (e) {}
     }
     if (!localStorage.getItem('vkare_appointments')) {
         localStorage.setItem('vkare_appointments', JSON.stringify(SEED_DATA.appointments));
