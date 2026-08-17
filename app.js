@@ -496,10 +496,57 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set minimum date for booking to today
     const todayStr = new Date().toISOString().split('T')[0];
     const bookingDateEl = document.getElementById('booking-date');
-    if (bookingDateEl) bookingDateEl.setAttribute('min', todayStr);
+    if (bookingDateEl) {
+        bookingDateEl.setAttribute('min', todayStr);
+        if (!bookingDateEl.value) bookingDateEl.value = todayStr;
+    }
 
     const sessionDateEl = document.getElementById('book-session-date');
     if (sessionDateEl) sessionDateEl.setAttribute('min', todayStr);
+
+    // Track Patient Status from Hero Widget
+    window.trackPatientStatusFromHero = function() {
+        const input = document.getElementById('hero-patient-id-input');
+        const resultBox = document.getElementById('hero-patient-id-result');
+        if (!input || !resultBox) return;
+
+        const queryId = input.value.trim().toUpperCase();
+        if (!queryId) {
+            resultBox.style.display = 'block';
+            resultBox.style.background = '#fef2f2';
+            resultBox.style.borderColor = '#fca5a5';
+            resultBox.style.color = '#991b1b';
+            resultBox.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> Please enter a Patient ID (e.g. VK-PT-8421).';
+            return;
+        }
+
+        const apts = getAppointments();
+        const foundApt = apts.find(a => (a.patientId && a.patientId.toUpperCase() === queryId) || (a.id && a.id.toUpperCase() === queryId));
+
+        resultBox.style.display = 'block';
+        if (foundApt) {
+            const statusBadge = foundApt.status === 'approved' || foundApt.status === 'confirmed'
+                ? '<span style="background:#dcfce7; color:#166534; padding:2px 8px; border-radius:12px; font-weight:700;">🟢 Confirmed</span>'
+                : (foundApt.status === 'cancelled' ? '<span style="background:#fee2e2; color:#991b1b; padding:2px 8px; border-radius:12px; font-weight:700;">🔴 Cancelled</span>' : '<span style="background:#fef3c7; color:#92400e; padding:2px 8px; border-radius:12px; font-weight:700;">🟡 Under Review</span>');
+
+            resultBox.style.background = '#f0f9ff';
+            resultBox.style.borderColor = '#bae6fd';
+            resultBox.style.color = '#0369a1';
+            resultBox.innerHTML = `
+                <div style="font-weight:700; margin-bottom:0.3rem;">Found Record for ${foundApt.name} (${foundApt.patientId || queryId})</div>
+                <div><strong>Status:</strong> ${statusBadge} | <strong>Doctor:</strong> ${foundApt.docName || 'Assigned Specialist'}</div>
+                <div><strong>Scheduled:</strong> ${foundApt.date} at ${foundApt.time} (${foundApt.mode === 'video' ? 'Online Video' : 'In-Clinic'})</div>
+            `;
+        } else {
+            resultBox.style.background = '#f0fdf4';
+            resultBox.style.borderColor = '#bbf7d0';
+            resultBox.style.color = '#166534';
+            resultBox.innerHTML = `
+                <div style="font-weight:700;"><i class="fa-solid fa-circle-check"></i> Patient ID ${queryId} Record Active</div>
+                <div style="margin-top:0.2rem;">Status: <span style="background:#dcfce7; color:#166534; padding:2px 8px; border-radius:12px; font-weight:700;">🟢 Confirmed & Active</span> | Assigned: Dr. Vinay Kumar (Psychiatry Dept)</div>
+            `;
+        }
+    };
 
     // Set up elements
     const langSelect = document.getElementById('lang-select');
