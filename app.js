@@ -750,11 +750,15 @@ function renderDoctorsList() {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         `;
 
+        const photoHtml = (doc.photoUrl || doc.photo_url) 
+            ? `<img src="${doc.photoUrl || doc.photo_url}" alt="${name}" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; z-index:1;">`
+            : `<span style="font-size: 4.5rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));">${doc.avatar || '🩺'}</span>`;
+
         card.innerHTML = `
             <div>
-                <div class="doc-img-container" style="height:180px; background:linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; position:relative;">
-                    <span style="font-size: 4.5rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));">${doc.avatar || '🩺'}</span>
-                    <span style="position:absolute; top:12px; right:12px; background:rgba(255,255,255,0.9); padding:4px 10px; border-radius:20px; font-size:0.75rem; font-weight:700; color:#1e40af; border:1px solid #bfdbfe;">
+                <div class="doc-img-container" style="height:180px; background:linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; position:relative; overflow:hidden;">
+                    ${photoHtml}
+                    <span style="position:absolute; top:12px; right:12px; background:rgba(255,255,255,0.9); padding:4px 10px; border-radius:20px; font-size:0.75rem; font-weight:700; color:#1e40af; border:1px solid #bfdbfe; z-index:2;">
                         ${doc.licenseNo || 'Verified License'}
                     </span>
                 </div>
@@ -943,8 +947,11 @@ window.submitAppointmentForm = function(event) {
     const selectedDoc = doctors.find(d => d.id === targetDocId) || doctors[0];
     const docName = selectedDoc ? selectedDoc.name : "V-KARE Specialist";
 
+    const patientIdCode = "VK-PT-" + Math.floor(1000 + Math.random() * 9000);
+
     const newApt = {
         id: "apt-" + Math.floor(Math.random() * 900000 + 100000),
+        patientId: patientIdCode,
         name: nameInput.value,
         phone: phoneInput.value,
         email: emailInput.value,
@@ -977,6 +984,10 @@ let activeBookingForWhatsApp = null;
 function showBookingConfirmationModal(apt) {
     activeBookingForWhatsApp = apt;
     const modal = document.getElementById('booking-modal-overlay');
+    const patientIdValEl = document.getElementById('modal-patient-id-val');
+    if (patientIdValEl && apt.patientId) {
+        patientIdValEl.textContent = apt.patientId;
+    }
     if (modal) {
         modal.classList.add('active');
     }
@@ -1000,6 +1011,7 @@ window.sendWhatsAppConfirmation = function() {
     const modeLabel = apt.mode === 'video' ? 'Online Video Consultation' : 'In-Person Clinic Visit';
     
     const text = `Hi V-KARE Clinic, I would like to confirm my appointment:
+- *Patient ID:* ${apt.patientId || 'VK-PT-1000'}
 - *Patient Name:* ${apt.name}
 - *Phone:* ${apt.phone}
 - *Department:* ${deptLabel}
@@ -1248,6 +1260,33 @@ function setupAdminPanel() {
             if (mainSite) mainSite.style.display = 'block';
             if (adminSec) adminSec.style.display = 'none';
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    // Secret Admin Login Shortcut (Ctrl + Shift + A or triple-click V-KARE logo)
+    document.addEventListener('keydown', (e) => {
+        if (e.ctrlKey && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
+            e.preventDefault();
+            if (typeof navigateToPage === 'function') {
+                navigateToPage('admin');
+            }
+        }
+    });
+
+    const logoEl = document.querySelector('.logo');
+    if (logoEl) {
+        let logoClicks = 0;
+        let logoClickTimer = null;
+        logoEl.addEventListener('click', (e) => {
+            logoClicks++;
+            if (logoClicks >= 3) {
+                logoClicks = 0;
+                if (typeof navigateToPage === 'function') {
+                    navigateToPage('admin');
+                }
+            }
+            clearTimeout(logoClickTimer);
+            logoClickTimer = setTimeout(() => { logoClicks = 0; }, 800);
         });
     }
 
@@ -1515,6 +1554,7 @@ window.editDoctor = function(docId) {
     document.getElementById('doc-form-exp-kn').value = doc.expKn || doc.exp;
     document.getElementById('doc-form-hours').value = doc.hours;
     document.getElementById('doc-form-hours-kn').value = doc.hoursKn || doc.hours;
+    if (document.getElementById('doc-form-photo')) document.getElementById('doc-form-photo').value = doc.photoUrl || doc.photo_url || '';
     document.getElementById('doc-form-avatar').value = doc.avatar || "🧠";
     document.getElementById('doc-form-online').value = doc.onlineAvail ? 'yes' : 'no';
 
@@ -1525,6 +1565,7 @@ window.editDoctor = function(docId) {
 // Handle Doctor Form Submit (Add or Edit)
 function handleDocSubmit(e) {
     e.preventDefault();
+    const photoUrl = document.getElementById('doc-form-photo') ? document.getElementById('doc-form-photo').value.trim() : '';
     const name = document.getElementById('doc-form-name').value;
     const nameKn = document.getElementById('doc-form-name-kn').value;
     const qual = document.getElementById('doc-form-qual').value;
@@ -1551,7 +1592,7 @@ function handleDocSubmit(e) {
         if (docIndex !== -1) {
             docs[docIndex] = {
                 id: editingDoctorId,
-                name, nameKn, qual, dept, spec, specKn, exp, expKn, hours, hoursKn, avatar, onlineAvail
+                name, nameKn, qual, dept, spec, specKn, exp, expKn, hours, hoursKn, avatar, photoUrl, onlineAvail
             };
         }
         editingDoctorId = null;
@@ -1559,7 +1600,7 @@ function handleDocSubmit(e) {
         // Add new doctor
         const newDoc = {
             id: "doc" + Math.floor(Math.random() * 900000 + 100000),
-            name, nameKn, qual, dept, spec, specKn, exp, expKn, hours, hoursKn, avatar, onlineAvail
+            name, nameKn, qual, dept, spec, specKn, exp, expKn, hours, hoursKn, avatar, photoUrl, onlineAvail
         };
         docs.push(newDoc);
     }

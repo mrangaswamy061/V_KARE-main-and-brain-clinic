@@ -540,7 +540,7 @@
             </div>
             <div class="container footer-bottom">
                 <p data-translate="footerRights">© 2026 V-KARE Mind & Brain Clinic. All rights reserved.</p>
-                <p class="admin-trigger-link" id="admin-link" style="cursor:pointer; font-size:0.85rem;">Authorized Admin Log-In</p>
+                <p class="admin-trigger-link" id="admin-link" style="display:none; cursor:pointer; font-size:0.85rem;">Authorized Admin Log-In</p>
             </div>
         </footer>
 
@@ -598,6 +598,7 @@
             <div class="confirm-modal">
                 <div class="modal-icon"><i class="fa-regular fa-circle-check"></i></div>
                 <h3 data-translate="confirmTitle">Booking Successful!</h3>
+                <div id="modal-patient-id-badge" style="background:#e0f2fe; color:#0284c7; padding:0.5rem 1rem; border-radius:8px; font-weight:700; margin:0.8rem 0; font-size:1.05rem; display:inline-block;">Patient ID: <span id="modal-patient-id-val">VK-PT-1082</span></div>
                 <p data-translate="confirmDesc">Your appointment request has been recorded in our system. A clinic representative will call you shortly to confirm.</p>
                 <div class="modal-actions">
                     <button class="btn btn-primary" onclick="sendWhatsAppConfirmation()" data-translate="confirmWa"><i class="fa-brands fa-whatsapp"></i> Confirm via WhatsApp</button>
@@ -970,7 +971,11 @@
                                 <input type="text" id="doc-form-hours-kn" placeholder="ಸೋಮ - ಶನಿ: ಬೆಳಿಗ್ಗೆ 10:00 - ಮಧ್ಯಾಹ್ನ 1:00" required>
                             </div>
                             <div class="form-group" style="margin-bottom:1.2rem;">
-                                <label for="doc-form-avatar">Roster Icon Avatar</label>
+                                <label for="doc-form-photo">Doctor Profile Photo (Image URL or File Path)</label>
+                                <input type="text" id="doc-form-photo" placeholder="https://example.com/dr-photo.jpg or images/doctor.png">
+                            </div>
+                            <div class="form-group" style="margin-bottom:1.2rem;">
+                                <label for="doc-form-avatar">Roster Icon Avatar (Fallback)</label>
                                 <select id="doc-form-avatar" required>
                                     <option value="🧠">🧠 Brain (Psychiatry)</option>
                                     <option value="👩‍⚕️">👩‍⚕️ Female Doctor</option>
