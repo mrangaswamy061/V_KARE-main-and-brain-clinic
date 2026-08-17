@@ -621,8 +621,11 @@ async function loadAdminAppointmentsList() {
 
             tr.innerHTML = `
                 <td>
+                    <span style="background:#e0f2fe; color:#0369a1; padding:4px 10px; border-radius:10px; font-weight:700; font-size:0.82rem; display:inline-block;">${pid}</span>
+                </td>
+                <td>
                     <strong>${a.patient_name || a.name || 'Patient'}</strong><br>
-                    <span style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:10px; font-weight:700; font-size:0.78rem; display:inline-block; margin-top:3px;">Patient ID: ${pid}</span>
+                    <small style="color:#64748b;">${a.phone || ''} ${a.email ? '| ' + a.email : ''}</small>
                 </td>
                 <td>
                     <strong>${a.counselling_type || a.dept || 'General'}</strong><br>

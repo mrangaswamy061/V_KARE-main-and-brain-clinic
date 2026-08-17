@@ -1651,7 +1651,7 @@ window.editDoctor = function(docId) {
     document.getElementById('doc-form-hours').value = doc.hours;
     document.getElementById('doc-form-hours-kn').value = doc.hoursKn || doc.hours;
     if (document.getElementById('doc-form-photo')) document.getElementById('doc-form-photo').value = doc.photoUrl || doc.photo_url || '';
-    document.getElementById('doc-form-avatar').value = doc.avatar || "🧠";
+    if (document.getElementById('doc-form-avatar')) document.getElementById('doc-form-avatar').value = doc.avatar || "👨‍⚕️";
     document.getElementById('doc-form-online').value = doc.onlineAvail ? 'yes' : 'no';
 
     // Scroll form into view
@@ -1672,7 +1672,7 @@ function handleDocSubmit(e) {
     const expKn = document.getElementById('doc-form-exp-kn').value;
     const hours = document.getElementById('doc-form-hours').value;
     const hoursKn = document.getElementById('doc-form-hours-kn').value;
-    const avatar = document.getElementById('doc-form-avatar').value;
+    const avatar = document.getElementById('doc-form-avatar') ? document.getElementById('doc-form-avatar').value : "👨‍⚕️";
     const onlineAvail = document.getElementById('doc-form-online').value === 'yes';
 
     if (!name || !qual || !dept || !spec || !hours) {
