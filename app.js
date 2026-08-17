@@ -531,16 +531,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // PAGE-BY-PAGE ROUTER
+    // CONTINUOUS SMOOTH SCROLL ROUTER & NAVIGATION
     window.navigateToPage = function(pageId) {
         const pageMap = {
             'home': 'hero',
+            'hero': 'hero',
             'services': 'services',
             'doctors': 'doctors',
             'specialists': 'doctors',
             'booking': 'booking',
             'online-counselling': 'online-counselling-landing',
             'about': 'why-choose',
+            'why-choose': 'why-choose',
             'contact': 'contact',
             'portal': 'patient-dashboard-section',
             'admin': 'admin-section'
@@ -557,47 +559,75 @@ document.addEventListener('DOMContentLoaded', () => {
             if (mainSite) mainSite.style.display = 'none';
             if (adminSection) adminSection.style.display = 'none';
             if (patientDashboard) patientDashboard.style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         } else if (pageId === 'admin') {
             if (mainSite) mainSite.style.display = 'none';
             if (patientDashboard) patientDashboard.style.display = 'none';
             if (adminSection) adminSection.style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         } else {
             if (mainSite) mainSite.style.display = 'block';
             if (patientDashboard) patientDashboard.style.display = 'none';
             if (adminSection) adminSection.style.display = 'none';
 
+            // Show all main site sections for continuous scrolling
             allPages.forEach(secId => {
                 const el = document.getElementById(secId);
-                if (el) {
-                    if (secId === targetSecId || (pageId === 'home' && (secId === 'hero' || secId === 'gallery'))) {
-                        el.style.display = 'block';
-                    } else {
-                        el.style.display = 'none';
-                    }
+                if (el && secId !== 'online-counselling-landing') {
+                    el.style.display = 'block';
                 }
             });
-        }
 
-        // Highlight Navbar Links
+            // Smooth Scroll to Target Section
+            const targetEl = document.getElementById(targetSecId);
+            if (targetEl) {
+                const navHeight = 80;
+                const elementPosition = targetEl.getBoundingClientRect().top + window.pageYOffset;
+                const offsetPosition = elementPosition - navHeight;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    };
+
+    function handleHashRoute() {
+        const hash = window.location.hash.replace('#', '').trim();
+        if (hash) {
+            navigateToPage(hash);
+        }
+    }
+
+    window.addEventListener('hashchange', handleHashRoute);
+
+    // Active Nav Link Highlighting on Scroll
+    window.addEventListener('scroll', () => {
+        const mainSite = document.getElementById('main-site');
+        if (!mainSite || mainSite.style.display === 'none') return;
+
+        let currentSectionId = '';
+        const sections = document.querySelectorAll('section[id]');
+        const scrollPosition = window.pageYOffset + 120;
+
+        sections.forEach(sec => {
+            const top = sec.offsetTop;
+            const height = sec.offsetHeight;
+            if (scrollPosition >= top && scrollPosition < top + height) {
+                currentSectionId = sec.getAttribute('id') || '';
+            }
+        });
+
         navLinks.forEach(link => {
             const href = link.getAttribute('href') || '';
-            if (href === `#${pageId}` || (pageId === 'home' && href === '#home')) {
+            if (href === `#${currentSectionId}` || (currentSectionId === 'hero' && (href === '#hero' || href === '#home')) || (currentSectionId === 'why-choose' && (href === '#why-choose' || href === '#about'))) {
                 link.classList.add('active');
             } else {
                 link.classList.remove('active');
             }
         });
-
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-
-    function handleHashRoute() {
-        const hash = window.location.hash.replace('#', '').trim() || 'home';
-        navigateToPage(hash);
-    }
-
-    window.addEventListener('hashchange', handleHashRoute);
-    handleHashRoute();
+    });
 
     // Services Tabs Switching
     servicesTabBtns.forEach(btn => {
