@@ -548,6 +548,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    // Doctor Photo File Upload Listener
+    const docFileInput = document.getElementById('doc-form-file');
+    if (docFileInput) {
+        docFileInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(evt) {
+                    const dataUrl = evt.target.result;
+                    const photoInput = document.getElementById('doc-form-photo');
+                    if (photoInput) photoInput.value = dataUrl;
+                    const previewContainer = document.getElementById('doc-photo-preview-container');
+                    const previewImg = document.getElementById('doc-photo-preview-img');
+                    if (previewContainer && previewImg) {
+                        previewImg.src = dataUrl;
+                        previewContainer.style.display = 'flex';
+                    }
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    }
+
     // Set up elements
     const langSelect = document.getElementById('lang-select');
     const hamburger = document.getElementById('hamburger');
@@ -1460,8 +1483,9 @@ function renderAdminStats() {
         
         recent.forEach(a => {
             const tr = document.createElement('tr');
+            const pid = a.patientId || ('VK-PT-' + Math.floor(1000 + Math.random() * 9000));
             tr.innerHTML = `
-                <td><strong>${a.name}</strong></td>
+                <td><strong>${a.name}</strong><br><span style="background:#e0f2fe; color:#0369a1; padding:2px 6px; border-radius:10px; font-weight:700; font-size:0.75rem; display:inline-block; margin-top:2px;">${pid}</span></td>
                 <td>${a.docName}</td>
                 <td>${a.date}</td>
                 <td><span class="badge ${a.status}">${a.status}</span></td>
@@ -1493,9 +1517,10 @@ function renderAdminAppointmentsTable() {
         const tr = document.createElement('tr');
         const deptLabel = a.dept === 'psychiatry' ? 'Psychiatry' : (a.dept === 'orthopedics' ? 'Orthopedics' : 'Speech Therapy');
         const modeText = a.mode === 'video' ? 'Online' : 'In-Person';
+        const pid = a.patientId || ('VK-PT-' + Math.floor(1000 + Math.random() * 9000));
         
         tr.innerHTML = `
-            <td><strong>${a.name}</strong><br><small>${a.phone} | ${a.email || 'No email'}</small></td>
+            <td><strong>${a.name}</strong><br><span style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:10px; font-weight:700; font-size:0.78rem; display:inline-block; margin:2px 0;">Patient ID: ${pid}</span><br><small>${a.phone} | ${a.email || 'No email'}</small></td>
             <td><strong>${deptLabel}</strong><br><small>${a.docName}</small></td>
             <td><strong>${a.date}</strong><br><small>${a.time}</small></td>
             <td><span class="badge ${a.mode || 'in-person'}">${modeText}</span></td>
@@ -1526,8 +1551,12 @@ function renderAdminDoctorsTable() {
             ? '<br><span class="badge video" style="font-size:0.75rem; padding:0.1rem 0.4rem; margin-top:0.2rem; display:inline-block;">Online Available</span>' 
             : '<br><span class="badge in-person" style="font-size:0.75rem; padding:0.1rem 0.4rem; margin-top:0.2rem; display:inline-block;">In-Person Only</span>';
         
+        const photoThumb = (doc.photoUrl || doc.photo_url)
+            ? `<img src="${doc.photoUrl || doc.photo_url}" alt="${doc.name}" style="width:44px; height:44px; border-radius:50%; object-fit:cover; border:2px solid #0284c7;">`
+            : `<span style="font-size: 1.5rem;">${doc.avatar}</span>`;
+
         tr.innerHTML = `
-            <td><span style="font-size: 1.5rem;">${doc.avatar}</span></td>
+            <td>${photoThumb}</td>
             <td><strong>${doc.name}</strong><br><small>${doc.qual}</small></td>
             <td><strong>${deptLabel}</strong><br><small>${doc.spec}</small>${onlineBadge}</td>
             <td>${doc.hours}</td>

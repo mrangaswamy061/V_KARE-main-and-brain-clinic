@@ -984,8 +984,13 @@
                                 <input type="text" id="doc-form-hours-kn" placeholder="ಸೋಮ - ಶನಿ: ಬೆಳಿಗ್ಗೆ 10:00 - ಮಧ್ಯಾಹ್ನ 1:00" required>
                             </div>
                             <div class="form-group" style="margin-bottom:1.2rem;">
-                                <label for="doc-form-photo">Doctor Profile Photo (Image URL or File Path)</label>
-                                <input type="text" id="doc-form-photo" placeholder="https://example.com/dr-photo.jpg or images/doctor.png">
+                                <label for="doc-form-file"><i class="fa-solid fa-cloud-arrow-up" style="margin-right:0.4rem; color:var(--primary);"></i> Upload Doctor Photo (Select Image from Computer)</label>
+                                <input type="file" id="doc-form-file" accept="image/*" style="padding:0.5rem; border:1px solid #cbd5e1; border-radius:8px; width:100%; font-size:0.85rem; background:#f8fafc;">
+                                <div id="doc-photo-preview-container" style="display:none; margin-top:0.6rem; align-items:center; gap:0.8rem; background:#eff6ff; padding:0.5rem; border-radius:8px; border:1px solid #bfdbfe;">
+                                    <img id="doc-photo-preview-img" src="" alt="Doctor Photo Preview" style="width:50px; height:50px; border-radius:50%; object-fit:cover; border:2px solid #0284c7;">
+                                    <span style="font-size:0.8rem; color:#0369a1; font-weight:700;"><i class="fa-solid fa-circle-check"></i> Image Loaded Ready</span>
+                                </div>
+                                <input type="text" id="doc-form-photo" placeholder="Or enter Image URL (e.g. https://...)" style="margin-top:0.5rem;">
                             </div>
                             <div class="form-group" style="margin-bottom:1.2rem;">
                                 <label for="doc-form-avatar">Roster Icon Avatar (Fallback)</label>
