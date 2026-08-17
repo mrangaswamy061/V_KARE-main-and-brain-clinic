@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "name": "v-kare-mind-brain-clinic",
   "builds": [
     {
       "src": "server.js",

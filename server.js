@@ -59,13 +59,23 @@ const apiLimiter = rateLimit({
 app.use('/api/', apiLimiter);
 
 // ----------------------------------------------------
-// DB SETUP
+// DB SETUP WITH VERCEL SERVERLESS SAFE FALLBACK
 // ----------------------------------------------------
-const dbPath = path.join(storageBase, 'vkare_clinic.db');
-const db = new sqlite3.Database(dbPath, (err) => {
-    if (err) console.error('DB connection error:', err);
-    else console.log('SQLite Database Connected at:', dbPath);
-});
+const dbPath = isVercel ? '/tmp/vkare_clinic.db' : path.join(__dirname, 'vkare_clinic.db');
+let db;
+try {
+    db = new sqlite3.Database(dbPath, (err) => {
+        if (err) {
+            console.error('DB connection error, retrying in-memory:', err);
+            db = new sqlite3.Database(':memory:');
+        } else {
+            console.log('SQLite Database Connected at:', dbPath);
+        }
+    });
+} catch (e) {
+    console.error('SQLite initialization failed, using in-memory database:', e);
+    db = new sqlite3.Database(':memory:');
+}
 
 // Encryption Helper Functions
 function encrypt(text) {
@@ -915,6 +925,12 @@ app.post('/api/admin/restore', verifyToken, checkRole(['admin']), (req, res) => 
 
 app.use((req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+// Global Error Handler for Vercel Serverless Function
+app.use((err, req, res, next) => {
+    console.error('Vercel Serverless Function Error:', err);
+    res.status(500).json({ error: 'Internal Server Error', message: err.message });
 });
 
 if (require.main === module || !process.env.VERCEL) {
