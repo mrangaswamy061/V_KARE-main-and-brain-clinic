@@ -290,8 +290,112 @@
                         </div>
                     </div>
 
-                    <!-- Populated dynamically via app.js -->
-                    <div class="doctors-grid" id="doctors-grid"></div>
+                    <!-- Populated dynamically & initialized statically -->
+                    <div class="doctors-grid" id="doctors-grid">
+                        <!-- Doctor 1 -->
+                        <div class="doctor-card" style="background: #ffffff; border-radius: 16px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); border: 1px solid #e2e8f0; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+                            <div>
+                                <div class="doc-img-container" style="height:190px; background:linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; position:relative; overflow:hidden;">
+                                    <img src="images/doc_vinay.jpg" alt="Dr. Vinay Kumar" style="width:100%; height:100%; object-fit:cover; object-position:top center; position:absolute; top:0; left:0; z-index:1;">
+                                    <span style="position:absolute; top:12px; right:12px; background:rgba(255,255,255,0.92); padding:4px 10px; border-radius:20px; font-size:0.75rem; font-weight:700; color:#1e40af; border:1px solid #bfdbfe; z-index:2; backdrop-filter:blur(4px);">KMC Reg. No. 78241</span>
+                                </div>
+                                <div class="doc-info" style="padding: 1.5rem;">
+                                    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.5rem;">
+                                        <h3 class="doc-name" style="font-size:1.25rem; font-weight:700; color:#0f172a; margin:0;">Dr. Vinay Kumar</h3>
+                                        <span style="background:#fef3c7; color:#92400e; font-size:0.75rem; font-weight:700; padding:2px 8px; border-radius:12px; white-space:nowrap;">⭐ 4.9 (142+)</span>
+                                    </div>
+                                    <span class="doc-qual" style="color:#0284c7; font-size:0.8rem; font-weight:700; display:block; margin-bottom:0.4rem;">MD (Psychiatry), DPM (NIMHANS)</span>
+                                    <p class="doc-spec" style="font-size:0.9rem; color:#475569; margin-bottom:0.6rem; font-weight:500;">Consultant Psychiatrist & Mental Wellness Specialist</p>
+                                    <p class="doc-exp" style="font-size:0.8rem; color:#64748b; margin-bottom:0.8rem;"><i class="fa-solid fa-briefcase"></i> 12+ Years Experience</p>
+                                    <div class="doc-online-badge"><i class="fa-solid fa-video"></i> 💻 Online Consultation Available</div>
+                                    <div class="doc-hours" style="font-size:0.78rem; color:#64748b; margin-top:0.8rem;"><i class="far fa-clock"></i> Mon - Sat: 10:00 AM - 1:00 PM, 5:00 PM - 8:00 PM</div>
+                                    <div style="margin-top:0.8rem; font-size:0.9rem; color:#0f172a; font-weight:700;">Fee: <span style="color:#16a34a;">₹600</span> / Session</div>
+                                </div>
+                            </div>
+                            <div style="padding: 0 1.5rem 1.5rem 1.5rem; display:grid; grid-template-columns: 1fr 1fr; gap:0.6rem;">
+                                <button class="btn btn-secondary" onclick="viewDoctorProfile('doc1')" style="font-size:0.8rem; padding:0.6rem 0.4rem; white-space:nowrap;"><i class="fa-solid fa-circle-info"></i> Full Profile</button>
+                                <button class="btn btn-primary" onclick="scrollToBooking('psychiatry', 'doc1')" style="font-size:0.8rem; padding:0.6rem 0.4rem; white-space:nowrap;"><i class="fa-solid fa-calendar-check"></i> Book Slot</button>
+                            </div>
+                        </div>
+
+                        <!-- Doctor 2 -->
+                        <div class="doctor-card" style="background: #ffffff; border-radius: 16px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); border: 1px solid #e2e8f0; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+                            <div>
+                                <div class="doc-img-container" style="height:190px; background:linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; position:relative; overflow:hidden;">
+                                    <img src="images/doc_anitha.jpg" alt="Dr. Anitha K." style="width:100%; height:100%; object-fit:cover; object-position:top center; position:absolute; top:0; left:0; z-index:1;">
+                                    <span style="position:absolute; top:12px; right:12px; background:rgba(255,255,255,0.92); padding:4px 10px; border-radius:20px; font-size:0.75rem; font-weight:700; color:#1e40af; border:1px solid #bfdbfe; z-index:2; backdrop-filter:blur(4px);">RCI Reg. No. A59210</span>
+                                </div>
+                                <div class="doc-info" style="padding: 1.5rem;">
+                                    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.5rem;">
+                                        <h3 class="doc-name" style="font-size:1.25rem; font-weight:700; color:#0f172a; margin:0;">Dr. Anitha K.</h3>
+                                        <span style="background:#fef3c7; color:#92400e; font-size:0.75rem; font-weight:700; padding:2px 8px; border-radius:12px; white-space:nowrap;">⭐ 4.8 (98+)</span>
+                                    </div>
+                                    <span class="doc-qual" style="color:#0284c7; font-size:0.8rem; font-weight:700; display:block; margin-bottom:0.4rem;">Ph.D. in Clinical Psychology, M.Phil (NIMHANS)</span>
+                                    <p class="doc-spec" style="font-size:0.9rem; color:#475569; margin-bottom:0.6rem; font-weight:500;">Senior Clinical Psychologist & Child Counselor</p>
+                                    <p class="doc-exp" style="font-size:0.8rem; color:#64748b; margin-bottom:0.8rem;"><i class="fa-solid fa-briefcase"></i> 8+ Years Experience</p>
+                                    <div class="doc-online-badge"><i class="fa-solid fa-video"></i> 💻 Online Consultation Available</div>
+                                    <div class="doc-hours" style="font-size:0.78rem; color:#64748b; margin-top:0.8rem;"><i class="far fa-clock"></i> Mon - Fri: 2:00 PM - 6:00 PM</div>
+                                    <div style="margin-top:0.8rem; font-size:0.9rem; color:#0f172a; font-weight:700;">Fee: <span style="color:#16a34a;">₹500</span> / Session</div>
+                                </div>
+                            </div>
+                            <div style="padding: 0 1.5rem 1.5rem 1.5rem; display:grid; grid-template-columns: 1fr 1fr; gap:0.6rem;">
+                                <button class="btn btn-secondary" onclick="viewDoctorProfile('doc2')" style="font-size:0.8rem; padding:0.6rem 0.4rem; white-space:nowrap;"><i class="fa-solid fa-circle-info"></i> Full Profile</button>
+                                <button class="btn btn-primary" onclick="scrollToBooking('psychiatry', 'doc2')" style="font-size:0.8rem; padding:0.6rem 0.4rem; white-space:nowrap;"><i class="fa-solid fa-calendar-check"></i> Book Slot</button>
+                            </div>
+                        </div>
+
+                        <!-- Doctor 3 -->
+                        <div class="doctor-card" style="background: #ffffff; border-radius: 16px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); border: 1px solid #e2e8f0; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+                            <div>
+                                <div class="doc-img-container" style="height:190px; background:linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; position:relative; overflow:hidden;">
+                                    <img src="images/doc_kiran.jpg" alt="Dr. Kiran R. S." style="width:100%; height:100%; object-fit:cover; object-position:top center; position:absolute; top:0; left:0; z-index:1;">
+                                    <span style="position:absolute; top:12px; right:12px; background:rgba(255,255,255,0.92); padding:4px 10px; border-radius:20px; font-size:0.75rem; font-weight:700; color:#1e40af; border:1px solid #bfdbfe; z-index:2; backdrop-filter:blur(4px);">KMC Reg. No. 64109</span>
+                                </div>
+                                <div class="doc-info" style="padding: 1.5rem;">
+                                    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.5rem;">
+                                        <h3 class="doc-name" style="font-size:1.25rem; font-weight:700; color:#0f172a; margin:0;">Dr. Kiran R. S.</h3>
+                                        <span style="background:#fef3c7; color:#92400e; font-size:0.75rem; font-weight:700; padding:2px 8px; border-radius:12px; white-space:nowrap;">⭐ 4.9 (115+)</span>
+                                    </div>
+                                    <span class="doc-qual" style="color:#0284c7; font-size:0.8rem; font-weight:700; display:block; margin-bottom:0.4rem;">MS (Ortho), Fellowship in Pediatric Orthopedics (UK)</span>
+                                    <p class="doc-spec" style="font-size:0.9rem; color:#475569; margin-bottom:0.6rem; font-weight:500;">Senior Pediatric Orthopedic Surgeon</p>
+                                    <p class="doc-exp" style="font-size:0.8rem; color:#64748b; margin-bottom:0.8rem;"><i class="fa-solid fa-briefcase"></i> 10+ Years Experience</p>
+                                    <div class="doc-online-badge in-person"><i class="fa-solid fa-hospital-user"></i> In-Clinic Only</div>
+                                    <div class="doc-hours" style="font-size:0.78rem; color:#64748b; margin-top:0.8rem;"><i class="far fa-clock"></i> Tue, Thu, Sat: 4:00 PM - 7:00 PM</div>
+                                    <div style="margin-top:0.8rem; font-size:0.9rem; color:#0f172a; font-weight:700;">Fee: <span style="color:#16a34a;">₹700</span> / Session</div>
+                                </div>
+                            </div>
+                            <div style="padding: 0 1.5rem 1.5rem 1.5rem; display:grid; grid-template-columns: 1fr 1fr; gap:0.6rem;">
+                                <button class="btn btn-secondary" onclick="viewDoctorProfile('doc3')" style="font-size:0.8rem; padding:0.6rem 0.4rem; white-space:nowrap;"><i class="fa-solid fa-circle-info"></i> Full Profile</button>
+                                <button class="btn btn-primary" onclick="scrollToBooking('orthopedics', 'doc3')" style="font-size:0.8rem; padding:0.6rem 0.4rem; white-space:nowrap;"><i class="fa-solid fa-calendar-check"></i> Book Slot</button>
+                            </div>
+                        </div>
+
+                        <!-- Doctor 4 -->
+                        <div class="doctor-card" style="background: #ffffff; border-radius: 16px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); border: 1px solid #e2e8f0; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+                            <div>
+                                <div class="doc-img-container" style="height:190px; background:linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; position:relative; overflow:hidden;">
+                                    <img src="images/doc_shwetha.jpg" alt="Mrs. Shwetha G." style="width:100%; height:100%; object-fit:cover; object-position:top center; position:absolute; top:0; left:0; z-index:1;">
+                                    <span style="position:absolute; top:12px; right:12px; background:rgba(255,255,255,0.92); padding:4px 10px; border-radius:20px; font-size:0.75rem; font-weight:700; color:#1e40af; border:1px solid #bfdbfe; z-index:2; backdrop-filter:blur(4px);">RCI Reg. No. B84123</span>
+                                </div>
+                                <div class="doc-info" style="padding: 1.5rem;">
+                                    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.5rem;">
+                                        <h3 class="doc-name" style="font-size:1.25rem; font-weight:700; color:#0f172a; margin:0;">Mrs. Shwetha G.</h3>
+                                        <span style="background:#fef3c7; color:#92400e; font-size:0.75rem; font-weight:700; padding:2px 8px; border-radius:12px; white-space:nowrap;">⭐ 4.9 (160+)</span>
+                                    </div>
+                                    <span class="doc-qual" style="color:#0284c7; font-size:0.8rem; font-weight:700; display:block; margin-bottom:0.4rem;">BASLP, M.Sc. (Speech-Language Pathology)</span>
+                                    <p class="doc-spec" style="font-size:0.9rem; color:#475569; margin-bottom:0.6rem; font-weight:500;">Senior Speech Therapist & Audiologist</p>
+                                    <p class="doc-exp" style="font-size:0.8rem; color:#64748b; margin-bottom:0.8rem;"><i class="fa-solid fa-briefcase"></i> 6+ Years Experience</p>
+                                    <div class="doc-online-badge"><i class="fa-solid fa-video"></i> 💻 Online Consultation Available</div>
+                                    <div class="doc-hours" style="font-size:0.78rem; color:#64748b; margin-top:0.8rem;"><i class="far fa-clock"></i> Mon - Sat: 9:30 AM - 1:30 PM, 3:30 PM - 6:30 PM</div>
+                                    <div style="margin-top:0.8rem; font-size:0.9rem; color:#0f172a; font-weight:700;">Fee: <span style="color:#16a34a;">₹450</span> / Session</div>
+                                </div>
+                            </div>
+                            <div style="padding: 0 1.5rem 1.5rem 1.5rem; display:grid; grid-template-columns: 1fr 1fr; gap:0.6rem;">
+                                <button class="btn btn-secondary" onclick="viewDoctorProfile('doc4')" style="font-size:0.8rem; padding:0.6rem 0.4rem; white-space:nowrap;"><i class="fa-solid fa-circle-info"></i> Full Profile</button>
+                                <button class="btn btn-primary" onclick="scrollToBooking('speech', 'doc4')" style="font-size:0.8rem; padding:0.6rem 0.4rem; white-space:nowrap;"><i class="fa-solid fa-calendar-check"></i> Book Slot</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 

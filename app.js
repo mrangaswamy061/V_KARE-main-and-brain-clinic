@@ -208,7 +208,13 @@ let currentLanguage = 'en';
 let activeDepartmentFilter = 'all';
 
 // Fetching state data
-function getDoctors() { return JSON.parse(localStorage.getItem('vkare_doctors')); }
+function getDoctors() { 
+    let docs = JSON.parse(localStorage.getItem('vkare_doctors')) || SEED_DATA.doctors;
+    return docs.map(d => {
+        const photo = d.photoUrl || d.photo_url || (d.id === 'doc1' ? 'images/doc_vinay.jpg' : (d.id === 'doc2' ? 'images/doc_anitha.jpg' : (d.id === 'doc3' ? 'images/doc_kiran.jpg' : (d.id === 'doc4' ? 'images/doc_shwetha.jpg' : null))));
+        return { ...d, photoUrl: photo, photo_url: photo };
+    });
+}
 function getAppointments() { return JSON.parse(localStorage.getItem('vkare_appointments')); }
 function getTestimonials() { return JSON.parse(localStorage.getItem('vkare_testimonials')); }
 function getBlogs() { return JSON.parse(localStorage.getItem('vkare_blogs')); }
