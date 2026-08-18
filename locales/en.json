@@ -1,0 +1,110 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "specialists": "Specialists",
+    "onlineCounselling": "Online Counselling",
+    "about": "About Us",
+    "contact": "Contact",
+    "bookAppointment": "Book Appointment",
+    "admin": "Admin Panel"
+  },
+  "hero": {
+    "title": "Expert Care for <span>Mind, Brain</span> & Child Development",
+    "sub": "Multidisciplinary Healthcare Services Under One Roof. V-KARE brings professional psychiatry, child orthopedics, audiology, and therapy support directly to Tumkur.",
+    "bookBtn": "Book Appointment",
+    "callBtn": "Call Clinic",
+    "badge1Title": "Multidisciplinary",
+    "badge1Sub": "All specialties under one roof",
+    "badge2Title": "Licensed Experts",
+    "badge2Sub": "Verified Medical Licenses & Profiles"
+  },
+  "quickActions": {
+    "inClinicTitle": "In-Clinic Care (Offline)",
+    "inClinicDesc": "Visit V-KARE Clinic in Tumkur for face-to-face diagnostics, physical rehabilitation, and consultations.",
+    "inClinicBtn": "Book In-Clinic Slot",
+    "videoTitle": "Video Consultation (Online)",
+    "videoDesc": "Consult with our board-certified psychiatrists, clinical psychologists, and therapists from home.",
+    "videoBtn": "Book Video Slot"
+  },
+  "services": {
+    "title": "Our Services",
+    "sub": "Explore our expert departments designed for mental wellness, physical healing, and communication skills.",
+    "tabPsych": "Psychiatry & Psychology",
+    "tabOrtho": "Pediatric Orthopedics",
+    "tabSpeech": "Audiology & Speech Therapy",
+    "psychDesc": "We provide comprehensive assessment and evidence-based clinical support for adults and children facing psychological, behavioural, and emotional challenges.",
+    "orthoDesc": "Specialized diagnostics and surgical solutions for congenital deformities, bone injuries, and neuromuscular motor conditions in children.",
+    "speechDesc": "Advanced evaluation of hearing capacity, speech correction, feeding difficulties, and specialized school-based therapy support."
+  },
+  "why": {
+    "title": "Why Choose V-KARE?",
+    "sub": "We blend high-quality evidence-based clinical expertise with emotional and physical rehabilitation.",
+    "card1Title": "Evidence-Based Care",
+    "card1Text": "All psychiatric therapies, pediatric surgeries, and audiology services are backed by proven clinical standards.",
+    "card2Title": "Holistic Multidisciplinary Team",
+    "card2Text": "Psychiatrists, Pediatric Orthopedicians, Speech Therapists, and Psychologists collaborating under one roof.",
+    "card3Title": "Confidential & Safe",
+    "card3Text": "Your privacy is our priority. We maintain strict ethical standards for child and adult counselling.",
+    "card4Title": "Accessible & Local",
+    "card4Text": "Conveniently located in Siddaganga Extension, Tumkur, offering world-class care locally."
+  },
+  "specialists": {
+    "title": "Licensed Experts & Specialists",
+    "sub": "Consult with our team of board-certified, licensed clinicians dedicated to your holistic recovery.",
+    "allFilter": "🌐 All Experts",
+    "psychFilter": "🧠 Psychiatry & Mental Health",
+    "psychologyFilter": "👩‍⚕️ Clinical Psychology",
+    "orthoFilter": "🦴 Pediatric Orthopedics",
+    "speechFilter": "🗣️ Speech & Audiology",
+    "fullProfile": "Full Profile",
+    "bookSlot": "Book Slot",
+    "onlineAvail": "💻 Online Consultation Available",
+    "inPersonOnly": "🏥 In-Clinic Only",
+    "verifiedLicense": "Verified License",
+    "experience": "Experience",
+    "fee": "Fee",
+    "perSession": "Session"
+  },
+  "appointment": {
+    "title": "Online Appointment Booking",
+    "sub": "Submit your preferred slot. Our desk will contact you via Phone/WhatsApp to confirm.",
+    "name": "Patient Name",
+    "phone": "Mobile Number",
+    "email": "Email Address",
+    "department": "Select Department",
+    "doctor": "Select Doctor",
+    "date": "Preferred Date",
+    "time": "Preferred Time",
+    "mode": "Consultation Mode",
+    "modeInPerson": "In-Person (Clinic Visit)",
+    "modeVideo": "Online (Video Consultation)",
+    "message": "Brief details of condition (optional)",
+    "submit": "Book Appointment Now",
+    "step1Title": "Select Department",
+    "step1Desc": "Choose from Psychiatry, Pediatric Orthopedics, or Speech Pathologies depending on treatment required.",
+    "step2Title": "Select Slot & Date",
+    "step2Desc": "Choose a convenient date and time range for your consultation slot.",
+    "step3Title": "Consultation Mode",
+    "step3Desc": "Select In-Clinic visit or secure encrypted Video Consultation.",
+    "step4Title": "Confirm & Get Alerts",
+    "step4Desc": "Get instant confirmation, real-time portal notifications, and WhatsApp/Email status updates."
+  },
+  "contact": {
+    "title": "Contact & Location",
+    "sub": "Visit us at Tumkur or reach out directly for immediate support.",
+    "addressTitle": "Clinic Address",
+    "addressText": "3rd Cross, Jain Bhavana Road, Siddaganga Extension, Tumkur, Karnataka – 572102",
+    "phoneTitle": "Contact Numbers",
+    "phoneText": "9980999068",
+    "timingTitle": "Working Hours",
+    "timingText": "Mon - Sat: 9:30 AM - 8:30 PM (Sunday Holiday)"
+  },
+  "footer": {
+    "about": "V-KARE Mind & Brain Clinic is Tumkur's leading multidisciplinary healthcare clinic, providing dedicated services in Psychiatry, Child Orthopedics, Speech Pathology, and Counseling.",
+    "links": "Quick Links",
+    "specialties": "Specialties",
+    "rights": "© 2026 V-KARE Mind & Brain Clinic. All rights reserved.",
+    "adminLogin": "Authorized Admin Log-In"
+  }
+}

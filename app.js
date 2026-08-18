@@ -579,8 +579,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Chatbot Initialization
     initChatBot();
 
-    // Set Default Language
-    setLanguage('en');
+    // Set Saved or Default Language
+    const savedLang = localStorage.getItem('vkare_lang') || 'en';
+    setLanguage(savedLang);
 
     // Setup Admin Panel
     setupAdminPanel();
@@ -589,7 +590,9 @@ document.addEventListener('DOMContentLoaded', () => {
 // Set current language and re-render texts
 function setLanguage(lang) {
     currentLanguage = lang;
+    localStorage.setItem('vkare_lang', lang);
     const dict = TRANSLATIONS[lang];
+    if (!dict) return;
 
     // Find all elements with data-translate attribute
     const elements = document.querySelectorAll('[data-translate]');
