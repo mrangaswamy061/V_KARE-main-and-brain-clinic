@@ -21,6 +21,7 @@ const SEED_DATA = {
             hoursKn: "ಸೋಮ - ಶನಿ: ಬೆಳಿಗ್ಗೆ 10:00 - ಮಧ್ಯಾಹ್ನ 1:00, ಸಂಜೆ 5:00 - ರಾತ್ರಿ 8:00",
             dept: "psychiatry",
             avatar: "🧠",
+            photoUrl: "/images/doc_vinay.jpg",
             onlineAvail: true,
             bio: "Dr. Vinay Kumar is an acclaimed Psychiatrist trained at NIMHANS with 12+ years of clinical excellence in treating clinical depression, bipolar disorder, panic anxiety, OCD, and stress management through evidence-based pharmacological and CBT counseling therapies.",
             bioKn: "ಡಾ. ವಿನಯ್ ಕುಮಾರ್ ಅವರು ನಿಮ್ಹಾನ್ಸ್‌ನಿಂದ ತರಬೇತಿ ಪಡೆದ ಪ್ರಸಿದ್ಧ ಮನೋವೈದ್ಯರಾಗಿದ್ದು, ಖಿನ್ನತೆ, ಆತಂಕ ಮತ್ತು ಒತ್ತಡ ನಿವಾರಣೆಯಲ್ಲಿ ೧೨ಕ್ಕೂ ಹೆಚ್ಚು ವರ್ಷಗಳ ಅನುಭವ ಹೊಂದಿದ್ದಾರೆ.",
@@ -44,6 +45,7 @@ const SEED_DATA = {
             hoursKn: "ಸೋಮ - ಶುಕ್ರ: ಮಧ್ಯಾಹ್ನ 2:00 - ಸಂಜೆ 6:00",
             dept: "psychiatry",
             avatar: "👩‍⚕️",
+            photoUrl: "/images/doc_anitha.jpg",
             onlineAvail: true,
             bio: "Dr. Anitha K. is a licensed Rehabilitation Council of India (RCI) Clinical Psychologist specializing in ADHD behavioral therapy, IQ testing, adolescent counseling, trauma recovery, and family psychotherapy.",
             bioKn: "ಡಾ. ಅನಿತಾ ಕೆ. ಅವರು ಆರ್‌ಸಿಐ ಮಾನ್ಯತೆ ಪಡೆದ ಕ್ಲಿನಿಕಲ್ ಸೈಕಾಲಜಿಸ್ಟ್ ಆಗಿದ್ದು, ಮಕ್ಕಳ ನಡವಳಿಕೆ, ಎಡಿಎಚ್‌ಡಿ ಮತ್ತು ಕೌಟುಂಬಿಕ ಆಪ್ತಸಮಾಲೋಚನೆಯಲ್ಲಿ ಪರಿಣಿತರು.",
@@ -67,6 +69,7 @@ const SEED_DATA = {
             hoursKn: "ಮಂಗಳ, ಗುರು, ಶನಿ: ಸಂಜೆ 4:00 - ರಾತ್ರಿ 7:00",
             dept: "orthopedics",
             avatar: "🦴",
+            photoUrl: "/images/doc_kiran.jpg",
             onlineAvail: false,
             bio: "Dr. Kiran R. S. completed fellowship training in Pediatric Orthopedics in the UK. He specializes in Ponseti clubfoot correction, pediatric bone deformity corrections, cerebral palsy gait rehabilitation, and pediatric trauma management.",
             bioKn: "ಡಾ. ಕಿರಣ್ ಆರ್. ಎಸ್. ಅವರು ಯುಕೆ ಯಲ್ಲಿ ಮಕ್ಕಳ ಮೂಳೆ ಚಿಕಿತ್ಸೆಯ ಫೆಲೋಶಿಪ್ ಪಡೆದಿದ್ದು, ಕ್ಲಬ್‌ಫುಟ್ ಮತ್ತು ಮೂಳೆ ವೈಪರೀತ್ಯಗಳ ನಿವಾರಣೆಯಲ್ಲಿ ನುರಿತವರು.",
@@ -90,6 +93,7 @@ const SEED_DATA = {
             hoursKn: "ಸೋಮ - ಶನಿ: ಬೆಳಿಗ್ಗೆ 9:30 - ಮಧ್ಯಾಹ್ನ 1:30, ಸಂಜೆ 3:30 - 6:30",
             dept: "speech",
             avatar: "🗣️",
+            photoUrl: "/images/doc_shwetha.jpg",
             onlineAvail: true,
             bio: "Mrs. Shwetha G. is an RCI-registered Speech Pathologist with extensive experience in pediatric articulation disorders, stammering/stuttering therapy, autism spectrum communication therapy, and digital audiometric evaluations.",
             bioKn: "ಶ್ರೀಮತಿ ಶ್ವೇತಾ ಜಿ. ಅವರು ಮಾತು ಮತ್ತು ಶ್ರವಣ ಚಿಕಿತ್ಸೆಯಲ್ಲಿ ೬ ವರ್ಷಕ್ಕೂ ಹೆಚ್ಚು ಅನುಭವ ಹೊಂದಿದ್ದು, ತೋತಲಾಡುವಿಕೆ ಮತ್ತು ಆಟಿಸಂ ಮಕ್ಕಳ ಸಂವಹನ ಚಿಕಿತ್ಸೆಯಲ್ಲಿ ಪರಿಣಿತರು.",
@@ -182,9 +186,8 @@ const SEED_DATA = {
 
 // Initialize localStorage if keys don't exist
 function initLocalStorage() {
-    if (!localStorage.getItem('vkare_doctors')) {
-        localStorage.setItem('vkare_doctors', JSON.stringify(SEED_DATA.doctors));
-    }
+    // Always sync seed doctor objects with absolute photo URLs into localStorage
+    localStorage.setItem('vkare_doctors', JSON.stringify(SEED_DATA.doctors));
     if (!localStorage.getItem('vkare_appointments')) {
         localStorage.setItem('vkare_appointments', JSON.stringify(SEED_DATA.appointments));
     }
@@ -675,15 +678,13 @@ function renderDoctorsList() {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         `;
 
-        const photoPath = doc.photoUrl || doc.photo_url || (doc.id === 'doc1' ? 'images/doc_vinay.jpg' : (doc.id === 'doc2' ? 'images/doc_anitha.jpg' : (doc.id === 'doc3' ? 'images/doc_kiran.jpg' : (doc.id === 'doc4' ? 'images/doc_shwetha.jpg' : null))));
+        const photoPath = doc.photoUrl || doc.photo_url || (doc.id === 'doc1' ? '/images/doc_vinay.jpg' : (doc.id === 'doc2' ? '/images/doc_anitha.jpg' : (doc.id === 'doc3' ? '/images/doc_kiran.jpg' : (doc.id === 'doc4' ? '/images/doc_shwetha.jpg' : '/images/doc_vinay.jpg'))));
         
-        const photoHtml = photoPath
-            ? `<img src="${photoPath}" alt="${name}" style="width:100%; height:100%; object-fit:cover; object-position:top center; position:absolute; top:0; left:0; z-index:1;">`
-            : `<span style="font-size: 3.5rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));">${doc.avatar || '👨‍⚕️'}</span>`;
+        const photoHtml = `<img src="${photoPath}" alt="${name}" onerror="this.onerror=null; this.src='/images/doc_vinay.jpg';" style="width:100%; height:100%; object-fit:cover; object-position:top center;">`;
 
         card.innerHTML = `
             <div>
-                <div class="doc-img-container" style="height:190px; background:linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; position:relative; overflow:hidden;">
+                <div class="doc-img-container" style="width:100%; height:220px; background:linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden;">
                     ${photoHtml}
                     <span style="position:absolute; top:12px; right:12px; background:rgba(255,255,255,0.92); padding:4px 10px; border-radius:20px; font-size:0.75rem; font-weight:700; color:#1e40af; border:1px solid #bfdbfe; z-index:2; backdrop-filter:blur(4px);">
                         ${doc.licenseNo || 'Verified License'}
