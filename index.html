@@ -166,19 +166,23 @@
             <section class="treatment-modes-sec container">
                 <div class="modes-container">
                     <div class="mode-card offline">
-                        <div class="mode-icon"><i class="fa-solid fa-house-chimney-medical"></i></div>
                         <div class="mode-details">
-                            <h3 data-translate="modeOfflineTitle">In-Clinic Care (Offline)</h3>
+                            <div class="mode-card-header">
+                                <div class="mode-icon"><i class="fa-solid fa-house-chimney-medical"></i></div>
+                                <h3 data-translate="modeOfflineTitle">In-Clinic Care (Offline)</h3>
+                            </div>
                             <p data-translate="modeOfflineDesc">Visit V-KARE Clinic in Tumkur for face-to-face diagnostics, physical rehabilitation, and consultations.</p>
-                            <button class="btn btn-primary" style="margin-top: 1rem; font-size: 0.9rem; padding: 0.6rem 1.2rem;" onclick="scrollToBookingWithMode('in-person')" data-translate="btnBookOffline">Book In-Clinic Slot</button>
+                            <button class="btn btn-primary" onclick="scrollToBookingWithMode('in-person')" data-translate="btnBookOffline"><i class="fa-solid fa-calendar-check"></i> Book In-Clinic Slot</button>
                         </div>
                     </div>
                     <div class="mode-card online">
-                        <div class="mode-icon"><i class="fa-solid fa-video"></i></div>
                         <div class="mode-details">
-                            <h3 data-translate="modeOnlineTitle">Video Consultation (Online)</h3>
+                            <div class="mode-card-header">
+                                <div class="mode-icon"><i class="fa-solid fa-video"></i></div>
+                                <h3 data-translate="modeOnlineTitle">Video Consultation (Online)</h3>
+                            </div>
                             <p data-translate="modeOnlineDesc">Consult with our board-certified psychiatrists, clinical psychologists, and therapists from home.</p>
-                            <button class="btn btn-primary" style="margin-top: 1rem; font-size: 0.9rem; padding: 0.6rem 1.2rem;" onclick="scrollToBookingWithMode('video')" data-translate="btnBookOnline">Book Video Slot</button>
+                            <button class="btn btn-primary" onclick="scrollToBookingWithMode('video')" data-translate="btnBookOnline"><i class="fa-solid fa-video"></i> Book Video Slot</button>
                         </div>
                     </div>
                 </div>
