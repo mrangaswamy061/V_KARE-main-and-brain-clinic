@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgPsych" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0f9ff" />
+      <stop offset="100%" stop-color="#e0f2fe" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" rx="30" fill="url(#bgPsych)" />
+  <circle cx="400" cy="250" r="120" fill="#0284c7" opacity="0.1" />
+  <path d="M340 220 Q400 150 460 220 T520 320 Q400 420 280 320 Z" fill="none" stroke="#0284c7" stroke-width="10" stroke-linecap="round" />
+  <circle cx="400" cy="270" r="40" fill="#0284c7" />
+  <text x="400" y="440" font-family="system-ui, sans-serif" font-size="32" font-weight="700" fill="#0f172a" text-anchor="middle">Psychiatry &amp; Mental Wellness</text>
+  <text x="400" y="480" font-family="system-ui, sans-serif" font-size="20" font-weight="500" fill="#475569" text-anchor="middle">Evidence-Based Clinical Counseling &amp; Rehabilitation</text>
+</svg>

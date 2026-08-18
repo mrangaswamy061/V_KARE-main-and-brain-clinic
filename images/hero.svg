@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eff6ff" />
+      <stop offset="100%" stop-color="#dbeafe" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A4ABF" />
+      <stop offset="100%" stop-color="#00B4D8" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" rx="30" fill="url(#bg)" />
+  <circle cx="400" cy="240" r="140" fill="#ffffff" opacity="0.9" />
+  <!-- Brain / Mind Graphic -->
+  <path d="M350 200 C330 160, 270 160, 250 200 C230 220, 230 260, 250 280 C240 310, 260 340, 290 350 C320 360, 350 340, 360 310" fill="none" stroke="url(#cardGrad)" stroke-width="12" stroke-linecap="round" />
+  <path d="M450 200 C470 160, 530 160, 550 200 C570 220, 570 260, 550 280 C560 310, 540 340, 510 350 C480 360, 450 340, 440 310" fill="none" stroke="url(#cardGrad)" stroke-width="12" stroke-linecap="round" />
+  <circle cx="400" cy="240" r="25" fill="#0A4ABF" />
+  <!-- Text -->
+  <text x="400" y="440" font-family="system-ui, sans-serif" font-size="36" font-weight="800" fill="#03256C" text-anchor="middle">V-KARE Mind &amp; Brain Clinic</text>
+  <text x="400" y="485" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#00B4D8" text-anchor="middle">Psychiatry • Pediatric Orthopedics • Speech Therapy</text>
+</svg>
