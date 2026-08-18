@@ -1,15 +1,13 @@
 {
-  "name": "v-kare-mind-brain-clinic",
+  "name": "v-kare-web",
   "version": "1.0.0",
-  "description": "V-KARE Mind & Brain Clinic Web Application - Psychiatry, Orthopedics & Speech Therapy",
-  "main": "server.js",
+  "description": "",
+  "main": "app.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["v-kare", "clinic", "psychiatry", "speech-therapy", "orthopedics"],
-  "author": "V-KARE Mind & Brain Clinic",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {

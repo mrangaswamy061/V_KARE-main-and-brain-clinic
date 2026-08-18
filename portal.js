@@ -617,15 +617,11 @@ async function loadAdminAppointmentsList() {
             const waLog = aptLogs.find(l => l.channel === 'whatsapp') || { status: 'sent' };
 
             const statusBadgeClass = a.status === 'approved' ? 'success' : (a.status === 'rejected' ? 'danger' : (a.status === 'paid' ? 'info' : 'warning'));
-            const pid = a.patient_id || a.patientId || ('VK-PT-' + (a.id ? a.id.toString().replace(/[^0-9]/g, '').slice(-4) : Math.floor(1000 + Math.random() * 9000)));
 
             tr.innerHTML = `
                 <td>
-                    <span style="background:#e0f2fe; color:#0369a1; padding:4px 10px; border-radius:10px; font-weight:700; font-size:0.82rem; display:inline-block;">${pid}</span>
-                </td>
-                <td>
                     <strong>${a.patient_name || a.name || 'Patient'}</strong><br>
-                    <small style="color:#64748b;">${a.phone || ''} ${a.email ? '| ' + a.email : ''}</small>
+                    <small style="color:#64748b;">ID: ${a.id}</small>
                 </td>
                 <td>
                     <strong>${a.counselling_type || a.dept || 'General'}</strong><br>

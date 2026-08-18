@@ -20,8 +20,7 @@ const SEED_DATA = {
             hours: "Mon - Sat: 10:00 AM - 1:00 PM, 5:00 PM - 8:00 PM",
             hoursKn: "ಸೋಮ - ಶನಿ: ಬೆಳಿಗ್ಗೆ 10:00 - ಮಧ್ಯಾಹ್ನ 1:00, ಸಂಜೆ 5:00 - ರಾತ್ರಿ 8:00",
             dept: "psychiatry",
-            avatar: "👨‍⚕️",
-            photoUrl: "images/doc_vinay.jpg",
+            avatar: "🧠",
             onlineAvail: true,
             bio: "Dr. Vinay Kumar is an acclaimed Psychiatrist trained at NIMHANS with 12+ years of clinical excellence in treating clinical depression, bipolar disorder, panic anxiety, OCD, and stress management through evidence-based pharmacological and CBT counseling therapies.",
             bioKn: "ಡಾ. ವಿನಯ್ ಕುಮಾರ್ ಅವರು ನಿಮ್ಹಾನ್ಸ್‌ನಿಂದ ತರಬೇತಿ ಪಡೆದ ಪ್ರಸಿದ್ಧ ಮನೋವೈದ್ಯರಾಗಿದ್ದು, ಖಿನ್ನತೆ, ಆತಂಕ ಮತ್ತು ಒತ್ತಡ ನಿವಾರಣೆಯಲ್ಲಿ ೧೨ಕ್ಕೂ ಹೆಚ್ಚು ವರ್ಷಗಳ ಅನುಭವ ಹೊಂದಿದ್ದಾರೆ.",
@@ -45,7 +44,6 @@ const SEED_DATA = {
             hoursKn: "ಸೋಮ - ಶುಕ್ರ: ಮಧ್ಯಾಹ್ನ 2:00 - ಸಂಜೆ 6:00",
             dept: "psychiatry",
             avatar: "👩‍⚕️",
-            photoUrl: "images/doc_anitha.jpg",
             onlineAvail: true,
             bio: "Dr. Anitha K. is a licensed Rehabilitation Council of India (RCI) Clinical Psychologist specializing in ADHD behavioral therapy, IQ testing, adolescent counseling, trauma recovery, and family psychotherapy.",
             bioKn: "ಡಾ. ಅನಿತಾ ಕೆ. ಅವರು ಆರ್‌ಸಿಐ ಮಾನ್ಯತೆ ಪಡೆದ ಕ್ಲಿನಿಕಲ್ ಸೈಕಾಲಜಿಸ್ಟ್ ಆಗಿದ್ದು, ಮಕ್ಕಳ ನಡವಳಿಕೆ, ಎಡಿಎಚ್‌ಡಿ ಮತ್ತು ಕೌಟುಂಬಿಕ ಆಪ್ತಸಮಾಲೋಚನೆಯಲ್ಲಿ ಪರಿಣಿತರು.",
@@ -68,8 +66,7 @@ const SEED_DATA = {
             hours: "Tue, Thu, Sat: 4:00 PM - 7:00 PM",
             hoursKn: "ಮಂಗಳ, ಗುರು, ಶನಿ: ಸಂಜೆ 4:00 - ರಾತ್ರಿ 7:00",
             dept: "orthopedics",
-            avatar: "👨‍⚕️",
-            photoUrl: "images/doc_kiran.jpg",
+            avatar: "🦴",
             onlineAvail: false,
             bio: "Dr. Kiran R. S. completed fellowship training in Pediatric Orthopedics in the UK. He specializes in Ponseti clubfoot correction, pediatric bone deformity corrections, cerebral palsy gait rehabilitation, and pediatric trauma management.",
             bioKn: "ಡಾ. ಕಿರಣ್ ಆರ್. ಎಸ್. ಅವರು ಯುಕೆ ಯಲ್ಲಿ ಮಕ್ಕಳ ಮೂಳೆ ಚಿಕಿತ್ಸೆಯ ಫೆಲೋಶಿಪ್ ಪಡೆದಿದ್ದು, ಕ್ಲಬ್‌ಫುಟ್ ಮತ್ತು ಮೂಳೆ ವೈಪರೀತ್ಯಗಳ ನಿವಾರಣೆಯಲ್ಲಿ ನುರಿತವರು.",
@@ -92,8 +89,7 @@ const SEED_DATA = {
             hours: "Mon - Sat: 9:30 AM - 1:30 PM, 3:30 PM - 6:30 PM",
             hoursKn: "ಸೋಮ - ಶನಿ: ಬೆಳಿಗ್ಗೆ 9:30 - ಮಧ್ಯಾಹ್ನ 1:30, ಸಂಜೆ 3:30 - 6:30",
             dept: "speech",
-            avatar: "👩‍⚕️",
-            photoUrl: "images/doc_shwetha.jpg",
+            avatar: "🗣️",
             onlineAvail: true,
             bio: "Mrs. Shwetha G. is an RCI-registered Speech Pathologist with extensive experience in pediatric articulation disorders, stammering/stuttering therapy, autism spectrum communication therapy, and digital audiometric evaluations.",
             bioKn: "ಶ್ರೀಮತಿ ಶ್ವೇತಾ ಜಿ. ಅವರು ಮಾತು ಮತ್ತು ಶ್ರವಣ ಚಿಕಿತ್ಸೆಯಲ್ಲಿ ೬ ವರ್ಷಕ್ಕೂ ಹೆಚ್ಚು ಅನುಭವ ಹೊಂದಿದ್ದು, ತೋತಲಾಡುವಿಕೆ ಮತ್ತು ಆಟಿಸಂ ಮಕ್ಕಳ ಸಂವಹನ ಚಿಕಿತ್ಸೆಯಲ್ಲಿ ಪರಿಣಿತರು.",
@@ -188,22 +184,6 @@ const SEED_DATA = {
 function initLocalStorage() {
     if (!localStorage.getItem('vkare_doctors')) {
         localStorage.setItem('vkare_doctors', JSON.stringify(SEED_DATA.doctors));
-    } else {
-        // Sync photos to existing local storage doctors if missing
-        try {
-            let docs = JSON.parse(localStorage.getItem('vkare_doctors'));
-            let updated = false;
-            docs.forEach(d => {
-                const seedDoc = SEED_DATA.doctors.find(s => s.id === d.id);
-                if (seedDoc && seedDoc.photoUrl && !d.photoUrl) {
-                    d.photoUrl = seedDoc.photoUrl;
-                    updated = true;
-                }
-            });
-            if (updated) {
-                localStorage.setItem('vkare_doctors', JSON.stringify(docs));
-            }
-        } catch (e) {}
     }
     if (!localStorage.getItem('vkare_appointments')) {
         localStorage.setItem('vkare_appointments', JSON.stringify(SEED_DATA.appointments));
@@ -513,84 +493,6 @@ const TRANSLATIONS = {
 
 // 3. PAGE INITIALIZATION
 document.addEventListener('DOMContentLoaded', () => {
-    // Set minimum date for booking to today
-    const todayStr = new Date().toISOString().split('T')[0];
-    const bookingDateEl = document.getElementById('booking-date');
-    if (bookingDateEl) {
-        bookingDateEl.setAttribute('min', todayStr);
-        if (!bookingDateEl.value) bookingDateEl.value = todayStr;
-    }
-
-    const sessionDateEl = document.getElementById('book-session-date');
-    if (sessionDateEl) sessionDateEl.setAttribute('min', todayStr);
-
-    // Track Patient Status from Hero Widget
-    window.trackPatientStatusFromHero = function() {
-        const input = document.getElementById('hero-patient-id-input');
-        const resultBox = document.getElementById('hero-patient-id-result');
-        if (!input || !resultBox) return;
-
-        const queryId = input.value.trim().toUpperCase();
-        if (!queryId) {
-            resultBox.style.display = 'block';
-            resultBox.style.background = '#fef2f2';
-            resultBox.style.borderColor = '#fca5a5';
-            resultBox.style.color = '#991b1b';
-            resultBox.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> Please enter a Patient ID (e.g. VK-PT-8421).';
-            return;
-        }
-
-        const apts = getAppointments();
-        const foundApt = apts.find(a => (a.patientId && a.patientId.toUpperCase() === queryId) || (a.id && a.id.toUpperCase() === queryId));
-
-        resultBox.style.display = 'block';
-        if (foundApt) {
-            const statusBadge = foundApt.status === 'approved' || foundApt.status === 'confirmed'
-                ? '<span style="background:#dcfce7; color:#166534; padding:2px 8px; border-radius:12px; font-weight:700;">🟢 Confirmed</span>'
-                : (foundApt.status === 'cancelled' ? '<span style="background:#fee2e2; color:#991b1b; padding:2px 8px; border-radius:12px; font-weight:700;">🔴 Cancelled</span>' : '<span style="background:#fef3c7; color:#92400e; padding:2px 8px; border-radius:12px; font-weight:700;">🟡 Under Review</span>');
-
-            resultBox.style.background = '#f0f9ff';
-            resultBox.style.borderColor = '#bae6fd';
-            resultBox.style.color = '#0369a1';
-            resultBox.innerHTML = `
-                <div style="font-weight:700; margin-bottom:0.3rem;">Found Record for ${foundApt.name} (${foundApt.patientId || queryId})</div>
-                <div><strong>Status:</strong> ${statusBadge} | <strong>Doctor:</strong> ${foundApt.docName || 'Assigned Specialist'}</div>
-                <div><strong>Scheduled:</strong> ${foundApt.date} at ${foundApt.time} (${foundApt.mode === 'video' ? 'Online Video' : 'In-Clinic'})</div>
-            `;
-        } else {
-            resultBox.style.background = '#f0fdf4';
-            resultBox.style.borderColor = '#bbf7d0';
-            resultBox.style.color = '#166534';
-            resultBox.innerHTML = `
-                <div style="font-weight:700;"><i class="fa-solid fa-circle-check"></i> Patient ID ${queryId} Record Active</div>
-                <div style="margin-top:0.2rem;">Status: <span style="background:#dcfce7; color:#166534; padding:2px 8px; border-radius:12px; font-weight:700;">🟢 Confirmed & Active</span> | Assigned: Dr. Vinay Kumar (Psychiatry Dept)</div>
-            `;
-        }
-    };
-
-    // Doctor Photo File Upload Listener
-    const docFileInput = document.getElementById('doc-form-file');
-    if (docFileInput) {
-        docFileInput.addEventListener('change', (e) => {
-            const file = e.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(evt) {
-                    const dataUrl = evt.target.result;
-                    const photoInput = document.getElementById('doc-form-photo');
-                    if (photoInput) photoInput.value = dataUrl;
-                    const previewContainer = document.getElementById('doc-photo-preview-container');
-                    const previewImg = document.getElementById('doc-photo-preview-img');
-                    if (previewContainer && previewImg) {
-                        previewImg.src = dataUrl;
-                        previewContainer.style.display = 'flex';
-                    }
-                };
-                reader.readAsDataURL(file);
-            }
-        });
-    }
-
     // Set up elements
     const langSelect = document.getElementById('lang-select');
     const hamburger = document.getElementById('hamburger');
@@ -621,85 +523,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // CONTINUOUS SMOOTH SCROLL ROUTER & NAVIGATION
-    window.navigateToPage = function(pageId) {
-        const pageMap = {
-            'home': 'hero',
-            'hero': 'hero',
-            'services': 'services',
-            'doctors': 'doctors',
-            'specialists': 'doctors',
-            'booking': 'booking',
-            'online-counselling': 'online-counselling-landing',
-            'about': 'why-choose',
-            'why-choose': 'why-choose',
-            'contact': 'contact',
-            'portal': 'patient-dashboard-section',
-            'admin': 'admin-section'
-        };
-
-        const targetSecId = pageMap[pageId] || 'hero';
-        const allPages = ['hero', 'services', 'doctors', 'booking', 'online-counselling-landing', 'why-choose', 'contact', 'gallery'];
-        
-        const mainSite = document.getElementById('main-site');
-        const patientDashboard = document.getElementById('patient-dashboard-section');
-        const adminSection = document.getElementById('admin-section');
-
-        if (pageId === 'portal' || pageId === 'dashboard') {
-            if (mainSite) mainSite.style.display = 'none';
-            if (adminSection) adminSection.style.display = 'none';
-            if (patientDashboard) patientDashboard.style.display = 'block';
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        } else if (pageId === 'admin') {
-            if (mainSite) mainSite.style.display = 'none';
-            if (patientDashboard) patientDashboard.style.display = 'none';
-            if (adminSection) adminSection.style.display = 'block';
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        } else {
-            if (mainSite) mainSite.style.display = 'block';
-            if (patientDashboard) patientDashboard.style.display = 'none';
-            if (adminSection) adminSection.style.display = 'none';
-
-            // Show all main site sections for continuous scrolling
-            allPages.forEach(secId => {
-                const el = document.getElementById(secId);
-                if (el && secId !== 'online-counselling-landing') {
-                    el.style.display = 'block';
-                }
-            });
-
-            // Smooth Scroll to Target Section
-            const targetEl = document.getElementById(targetSecId);
-            if (targetEl) {
-                const navHeight = 80;
-                const elementPosition = targetEl.getBoundingClientRect().top + window.pageYOffset;
-                const offsetPosition = elementPosition - navHeight;
-
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        }
-    };
-
-    function handleHashRoute() {
-        const hash = window.location.hash.replace('#', '').trim();
-        if (hash) {
-            navigateToPage(hash);
-        }
-    }
-
-    window.addEventListener('hashchange', handleHashRoute);
-
-    // Active Nav Link Highlighting on Scroll
+    // Navigation Active Link Highlighting
     window.addEventListener('scroll', () => {
-        const mainSite = document.getElementById('main-site');
-        if (!mainSite || mainSite.style.display === 'none') return;
-
         let currentSectionId = '';
-        const sections = document.querySelectorAll('section[id]');
-        const scrollPosition = window.pageYOffset + 120;
+        const sections = document.querySelectorAll('section, header');
+        const scrollPosition = window.scrollY + 120;
 
         sections.forEach(sec => {
             const top = sec.offsetTop;
@@ -710,11 +538,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         navLinks.forEach(link => {
-            const href = link.getAttribute('href') || '';
-            if (href === `#${currentSectionId}` || (currentSectionId === 'hero' && (href === '#hero' || href === '#home')) || (currentSectionId === 'why-choose' && (href === '#why-choose' || href === '#about'))) {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${currentSectionId}`) {
                 link.classList.add('active');
-            } else {
-                link.classList.remove('active');
             }
         });
     });
@@ -840,15 +666,17 @@ function renderDoctorsList() {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         `;
 
-        const photoHtml = (doc.photoUrl || doc.photo_url) 
-            ? `<img src="${doc.photoUrl || doc.photo_url}" alt="${name}" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; z-index:1;">`
-            : `<span style="font-size: 4.5rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));">${doc.avatar || '🩺'}</span>`;
+        const photoPath = doc.photoUrl || doc.photo_url || (doc.id === 'doc1' ? 'images/doc_vinay.jpg' : (doc.id === 'doc2' ? 'images/doc_anitha.jpg' : (doc.id === 'doc3' ? 'images/doc_kiran.jpg' : (doc.id === 'doc4' ? 'images/doc_shwetha.jpg' : null))));
+        
+        const photoHtml = photoPath
+            ? `<img src="${photoPath}" alt="${name}" style="width:100%; height:100%; object-fit:cover; object-position:top center; position:absolute; top:0; left:0; z-index:1;">`
+            : `<span style="font-size: 3.5rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));">${doc.avatar || '👨‍⚕️'}</span>`;
 
         card.innerHTML = `
             <div>
-                <div class="doc-img-container" style="height:180px; background:linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; position:relative; overflow:hidden;">
+                <div class="doc-img-container" style="height:190px; background:linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; position:relative; overflow:hidden;">
                     ${photoHtml}
-                    <span style="position:absolute; top:12px; right:12px; background:rgba(255,255,255,0.9); padding:4px 10px; border-radius:20px; font-size:0.75rem; font-weight:700; color:#1e40af; border:1px solid #bfdbfe; z-index:2;">
+                    <span style="position:absolute; top:12px; right:12px; background:rgba(255,255,255,0.92); padding:4px 10px; border-radius:20px; font-size:0.75rem; font-weight:700; color:#1e40af; border:1px solid #bfdbfe; z-index:2; backdrop-filter:blur(4px);">
                         ${doc.licenseNo || 'Verified License'}
                     </span>
                 </div>
@@ -977,9 +805,6 @@ window.onDeptChange = function() {
 
 // Scroll to booking section and preselect department/doctor
 window.scrollToBooking = function(dept, docId) {
-    if (typeof navigateToPage === 'function') {
-        navigateToPage('booking');
-    }
     const deptSelect = document.getElementById('booking-dept');
     const bookingSec = document.getElementById('booking');
 
@@ -994,16 +819,11 @@ window.scrollToBooking = function(dept, docId) {
 
 // Scroll to booking section and preselect consultation mode (In-Person or Video)
 window.scrollToBookingWithMode = function(mode) {
-    if (typeof navigateToPage === 'function') {
-        navigateToPage('booking');
-    }
     const modeSelect = document.getElementById('booking-mode');
     const bookingSec = document.getElementById('booking');
 
-    if (modeSelect) {
+    if (modeSelect && bookingSec) {
         modeSelect.value = mode;
-    }
-    if (bookingSec) {
         bookingSec.scrollIntoView({ behavior: 'smooth' });
     }
 };
@@ -1037,11 +857,8 @@ window.submitAppointmentForm = function(event) {
     const selectedDoc = doctors.find(d => d.id === targetDocId) || doctors[0];
     const docName = selectedDoc ? selectedDoc.name : "V-KARE Specialist";
 
-    const patientIdCode = "VK-PT-" + Math.floor(1000 + Math.random() * 9000);
-
     const newApt = {
         id: "apt-" + Math.floor(Math.random() * 900000 + 100000),
-        patientId: patientIdCode,
         name: nameInput.value,
         phone: phoneInput.value,
         email: emailInput.value,
@@ -1074,10 +891,6 @@ let activeBookingForWhatsApp = null;
 function showBookingConfirmationModal(apt) {
     activeBookingForWhatsApp = apt;
     const modal = document.getElementById('booking-modal-overlay');
-    const patientIdValEl = document.getElementById('modal-patient-id-val');
-    if (patientIdValEl && apt.patientId) {
-        patientIdValEl.textContent = apt.patientId;
-    }
     if (modal) {
         modal.classList.add('active');
     }
@@ -1101,7 +914,6 @@ window.sendWhatsAppConfirmation = function() {
     const modeLabel = apt.mode === 'video' ? 'Online Video Consultation' : 'In-Person Clinic Visit';
     
     const text = `Hi V-KARE Clinic, I would like to confirm my appointment:
-- *Patient ID:* ${apt.patientId || 'VK-PT-1000'}
 - *Patient Name:* ${apt.name}
 - *Phone:* ${apt.phone}
 - *Department:* ${deptLabel}
@@ -1353,33 +1165,6 @@ function setupAdminPanel() {
         });
     }
 
-    // Secret Admin Login Shortcut (Ctrl + Shift + A or triple-click V-KARE logo)
-    document.addEventListener('keydown', (e) => {
-        if (e.ctrlKey && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
-            e.preventDefault();
-            if (typeof navigateToPage === 'function') {
-                navigateToPage('admin');
-            }
-        }
-    });
-
-    const logoEl = document.querySelector('.logo');
-    if (logoEl) {
-        let logoClicks = 0;
-        let logoClickTimer = null;
-        logoEl.addEventListener('click', (e) => {
-            logoClicks++;
-            if (logoClicks >= 3) {
-                logoClicks = 0;
-                if (typeof navigateToPage === 'function') {
-                    navigateToPage('admin');
-                }
-            }
-            clearTimeout(logoClickTimer);
-            logoClickTimer = setTimeout(() => { logoClicks = 0; }, 800);
-        });
-    }
-
     // Dashboard tabs switcher
     navBtns.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -1503,9 +1288,8 @@ function renderAdminStats() {
         
         recent.forEach(a => {
             const tr = document.createElement('tr');
-            const pid = a.patientId || ('VK-PT-' + Math.floor(1000 + Math.random() * 9000));
             tr.innerHTML = `
-                <td><strong>${a.name}</strong><br><span style="background:#e0f2fe; color:#0369a1; padding:2px 6px; border-radius:10px; font-weight:700; font-size:0.75rem; display:inline-block; margin-top:2px;">${pid}</span></td>
+                <td><strong>${a.name}</strong></td>
                 <td>${a.docName}</td>
                 <td>${a.date}</td>
                 <td><span class="badge ${a.status}">${a.status}</span></td>
@@ -1537,10 +1321,9 @@ function renderAdminAppointmentsTable() {
         const tr = document.createElement('tr');
         const deptLabel = a.dept === 'psychiatry' ? 'Psychiatry' : (a.dept === 'orthopedics' ? 'Orthopedics' : 'Speech Therapy');
         const modeText = a.mode === 'video' ? 'Online' : 'In-Person';
-        const pid = a.patientId || ('VK-PT-' + Math.floor(1000 + Math.random() * 9000));
         
         tr.innerHTML = `
-            <td><strong>${a.name}</strong><br><span style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:10px; font-weight:700; font-size:0.78rem; display:inline-block; margin:2px 0;">Patient ID: ${pid}</span><br><small>${a.phone} | ${a.email || 'No email'}</small></td>
+            <td><strong>${a.name}</strong><br><small>${a.phone} | ${a.email || 'No email'}</small></td>
             <td><strong>${deptLabel}</strong><br><small>${a.docName}</small></td>
             <td><strong>${a.date}</strong><br><small>${a.time}</small></td>
             <td><span class="badge ${a.mode || 'in-person'}">${modeText}</span></td>
@@ -1571,12 +1354,8 @@ function renderAdminDoctorsTable() {
             ? '<br><span class="badge video" style="font-size:0.75rem; padding:0.1rem 0.4rem; margin-top:0.2rem; display:inline-block;">Online Available</span>' 
             : '<br><span class="badge in-person" style="font-size:0.75rem; padding:0.1rem 0.4rem; margin-top:0.2rem; display:inline-block;">In-Person Only</span>';
         
-        const photoThumb = (doc.photoUrl || doc.photo_url)
-            ? `<img src="${doc.photoUrl || doc.photo_url}" alt="${doc.name}" style="width:44px; height:44px; border-radius:50%; object-fit:cover; border:2px solid #0284c7;">`
-            : `<span style="font-size: 1.5rem;">${doc.avatar}</span>`;
-
         tr.innerHTML = `
-            <td>${photoThumb}</td>
+            <td><span style="font-size: 1.5rem;">${doc.avatar}</span></td>
             <td><strong>${doc.name}</strong><br><small>${doc.qual}</small></td>
             <td><strong>${deptLabel}</strong><br><small>${doc.spec}</small>${onlineBadge}</td>
             <td>${doc.hours}</td>
@@ -1650,8 +1429,7 @@ window.editDoctor = function(docId) {
     document.getElementById('doc-form-exp-kn').value = doc.expKn || doc.exp;
     document.getElementById('doc-form-hours').value = doc.hours;
     document.getElementById('doc-form-hours-kn').value = doc.hoursKn || doc.hours;
-    if (document.getElementById('doc-form-photo')) document.getElementById('doc-form-photo').value = doc.photoUrl || doc.photo_url || '';
-    if (document.getElementById('doc-form-avatar')) document.getElementById('doc-form-avatar').value = doc.avatar || "👨‍⚕️";
+    document.getElementById('doc-form-avatar').value = doc.avatar || "🧠";
     document.getElementById('doc-form-online').value = doc.onlineAvail ? 'yes' : 'no';
 
     // Scroll form into view
@@ -1661,7 +1439,6 @@ window.editDoctor = function(docId) {
 // Handle Doctor Form Submit (Add or Edit)
 function handleDocSubmit(e) {
     e.preventDefault();
-    const photoUrl = document.getElementById('doc-form-photo') ? document.getElementById('doc-form-photo').value.trim() : '';
     const name = document.getElementById('doc-form-name').value;
     const nameKn = document.getElementById('doc-form-name-kn').value;
     const qual = document.getElementById('doc-form-qual').value;
@@ -1672,7 +1449,7 @@ function handleDocSubmit(e) {
     const expKn = document.getElementById('doc-form-exp-kn').value;
     const hours = document.getElementById('doc-form-hours').value;
     const hoursKn = document.getElementById('doc-form-hours-kn').value;
-    const avatar = document.getElementById('doc-form-avatar') ? document.getElementById('doc-form-avatar').value : "👨‍⚕️";
+    const avatar = document.getElementById('doc-form-avatar').value;
     const onlineAvail = document.getElementById('doc-form-online').value === 'yes';
 
     if (!name || !qual || !dept || !spec || !hours) {
@@ -1688,7 +1465,7 @@ function handleDocSubmit(e) {
         if (docIndex !== -1) {
             docs[docIndex] = {
                 id: editingDoctorId,
-                name, nameKn, qual, dept, spec, specKn, exp, expKn, hours, hoursKn, avatar, photoUrl, onlineAvail
+                name, nameKn, qual, dept, spec, specKn, exp, expKn, hours, hoursKn, avatar, onlineAvail
             };
         }
         editingDoctorId = null;
@@ -1696,7 +1473,7 @@ function handleDocSubmit(e) {
         // Add new doctor
         const newDoc = {
             id: "doc" + Math.floor(Math.random() * 900000 + 100000),
-            name, nameKn, qual, dept, spec, specKn, exp, expKn, hours, hoursKn, avatar, photoUrl, onlineAvail
+            name, nameKn, qual, dept, spec, specKn, exp, expKn, hours, hoursKn, avatar, onlineAvail
         };
         docs.push(newDoc);
     }

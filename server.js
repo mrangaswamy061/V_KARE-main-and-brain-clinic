@@ -1,12 +1,5 @@
-let sqlite3;
-try {
-    sqlite3 = require('sqlite3').verbose();
-} catch (err) {
-    console.warn('sqlite3 native binary not available in Vercel Serverless runtime. Enabling pure JS memory fallback.', err.message);
-    sqlite3 = null;
-}
-
 const express = require('express');
+const sqlite3 = require('sqlite3').verbose();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const multer = require('multer');
@@ -23,19 +16,12 @@ const JWT_SECRET = process.env.JWT_SECRET || 'vkare_secret_key_1029384756';
 const ENCRYPTION_KEY = Buffer.from(process.env.ENCRYPTION_KEY || 'vkare_secret_encrypt_key_32bytes', 'utf8'); // 32 bytes
 const IV_LENGTH = 16;
 
-const isVercel = process.env.VERCEL || process.env.NOW_BUILDER;
-const storageBase = isVercel ? '/tmp' : __dirname;
-
 // Ensure directories exist
-const uploadDir = path.join(storageBase, 'uploads');
-if (!fs.existsSync(uploadDir)) {
-    try { fs.mkdirSync(uploadDir, { recursive: true }); } catch (e) {}
-}
+const uploadDir = path.join(__dirname, 'uploads');
+if (!fs.existsSync(uploadDir)) fs.mkdirSync(uploadDir);
 
-const backupDir = path.join(storageBase, 'backups');
-if (!fs.existsSync(backupDir)) {
-    try { fs.mkdirSync(backupDir, { recursive: true }); } catch (e) {}
-}
+const backupDir = path.join(__dirname, 'backups');
+if (!fs.existsSync(backupDir)) fs.mkdirSync(backupDir);
 
 // Security Middlewares
 app.use(helmet({
@@ -66,66 +52,12 @@ const apiLimiter = rateLimit({
 app.use('/api/', apiLimiter);
 
 // ----------------------------------------------------
-// DB SETUP WITH VERCEL SERVERLESS SAFE FALLBACK
+// DB SETUP
 // ----------------------------------------------------
-const dbPath = isVercel ? '/tmp/vkare_clinic.db' : path.join(__dirname, 'vkare_clinic.db');
-let db;
-
-if (sqlite3) {
-    try {
-        db = new sqlite3.Database(dbPath, (err) => {
-            if (err) {
-                console.error('DB connection error, retrying in-memory:', err);
-                db = new sqlite3.Database(':memory:');
-            } else {
-                console.log('SQLite Database Connected at:', dbPath);
-            }
-        });
-    } catch (e) {
-        db = null;
-    }
-}
-
-if (!db) {
-    const mockStore = {
-        doctors: [
-            { id: 'doc1', user_id: 'user_doc1', name: 'Dr. Vinay Kumar', email: 'vinay@vkare.com', specialization: 'Psychiatrist & Mental Wellness Expert', experience: '12+ Years Experience', consultation_fee: 600.0, availability_status: 'online' },
-            { id: 'doc2', user_id: 'user_doc2', name: 'Dr. Anitha K.', email: 'anitha@vkare.com', specialization: 'Senior Clinical Psychologist & Child Counselor', experience: '8+ Years Experience', consultation_fee: 500.0, availability_status: 'online' },
-            { id: 'doc3', user_id: 'user_doc3', name: 'Dr. Kiran R. S.', email: 'kiran@vkare.com', specialization: 'Pediatric Orthopedic Surgeon', experience: '10+ Years Experience', consultation_fee: 700.0, availability_status: 'online' },
-            { id: 'doc4', user_id: 'user_doc4', name: 'Mrs. Shwetha G.', email: 'shwetha@vkare.com', specialization: 'Speech Therapist & Audiologist', experience: '6+ Years Experience', consultation_fee: 450.0, availability_status: 'online' }
-        ],
-        appointments: [],
-        users: []
-    };
-
-    db = {
-        serialize: function(fn) { if (fn) fn(); },
-        run: function(sql, params, cb) {
-            if (typeof params === 'function') { cb = params; params = []; }
-            if (cb) cb.call({ lastID: Date.now(), changes: 1 }, null);
-            return this;
-        },
-        get: function(sql, params, cb) {
-            if (typeof params === 'function') { cb = params; params = []; }
-            if (sql && sql.includes('count(*)')) {
-                cb(null, { count: mockStore.doctors.length });
-            } else {
-                cb(null, null);
-            }
-            return this;
-        },
-        all: function(sql, params, cb) {
-            if (typeof params === 'function') { cb = params; params = []; }
-            if (sql && sql.includes('doctors')) {
-                cb(null, mockStore.doctors);
-            } else {
-                cb(null, []);
-            }
-            return this;
-        },
-        close: function(cb) { if (cb) cb(null); }
-    };
-}
+const db = new sqlite3.Database(path.join(__dirname, 'vkare_clinic.db'), (err) => {
+    if (err) console.error('DB connection error:', err);
+    else console.log('SQLite Database Connected.');
+});
 
 // Encryption Helper Functions
 function encrypt(text) {
@@ -977,16 +909,6 @@ app.use((req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// Global Error Handler for Vercel Serverless Function
-app.use((err, req, res, next) => {
-    console.error('Vercel Serverless Function Error:', err);
-    res.status(500).json({ error: 'Internal Server Error', message: err.message });
+app.listen(PORT, () => {
+    console.log(`V-KARE Portal Server running on http://localhost:${PORT}`);
 });
-
-if (require.main === module || !process.env.VERCEL) {
-    app.listen(PORT, () => {
-        console.log(`V-KARE Portal Server running on http://localhost:${PORT}`);
-    });
-}
-
-module.exports = app;
