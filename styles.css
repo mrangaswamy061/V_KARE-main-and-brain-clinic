@@ -2083,3 +2083,8 @@ body.admin-mode #admin-section {
         left: auto;
     }
 }
+
+/* Hide public Admin Link */
+.admin-trigger-link {
+    display: none !important;
+}

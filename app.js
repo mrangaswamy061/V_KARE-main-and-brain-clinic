@@ -103,6 +103,7 @@ const SEED_DATA = {
     appointments: [
         {
             id: "apt-101",
+            patientId: "PID-849201",
             name: "Sunil Kumar",
             phone: "9876543210",
             email: "sunil@example.com",
@@ -117,6 +118,7 @@ const SEED_DATA = {
         },
         {
             id: "apt-102",
+            patientId: "PID-742109",
             name: "Raju Gowda",
             phone: "9900112233",
             email: "raju@example.com",
@@ -869,6 +871,7 @@ window.submitAppointmentForm = function(event) {
 
     const newApt = {
         id: "apt-" + Math.floor(Math.random() * 900000 + 100000),
+        patientId: "PID-" + Math.floor(Math.random() * 900000 + 100000),
         name: nameInput.value,
         phone: phoneInput.value,
         email: emailInput.value,
@@ -1111,6 +1114,40 @@ function setupAdminPanel() {
         });
     }
 
+    // Secret Keyboard Shortcut (Ctrl + Shift + A) for Admin Login
+    document.addEventListener('keydown', (e) => {
+        if (e.ctrlKey && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
+            e.preventDefault();
+            const modal = document.getElementById('admin-login-modal');
+            if (modal) {
+                modal.style.display = 'flex';
+                modal.classList.add('active');
+            }
+        }
+    });
+
+    // Secret Triple-Click on Copyright text for Admin Login
+    const copyText = document.getElementById('copyright-text');
+    if (copyText) {
+        let clicks = 0;
+        let timer = null;
+        copyText.addEventListener('click', () => {
+            clicks++;
+            if (clicks >= 3) {
+                clicks = 0;
+                clearTimeout(timer);
+                const modal = document.getElementById('admin-login-modal');
+                if (modal) {
+                    modal.style.display = 'flex';
+                    modal.classList.add('active');
+                }
+            } else {
+                clearTimeout(timer);
+                timer = setTimeout(() => { clicks = 0; }, 600);
+            }
+        });
+    }
+
     if (closeLogin) {
         closeLogin.addEventListener('click', () => {
             const modal = document.getElementById('admin-login-modal');
@@ -1331,9 +1368,14 @@ function renderAdminAppointmentsTable() {
         const tr = document.createElement('tr');
         const deptLabel = a.dept === 'psychiatry' ? 'Psychiatry' : (a.dept === 'orthopedics' ? 'Orthopedics' : 'Speech Therapy');
         const modeText = a.mode === 'video' ? 'Online' : 'In-Person';
+        const patId = a.patientId || a.patient_id || ('PID-' + String(a.phone || a.id).replace(/\D/g,'').slice(-6));
         
         tr.innerHTML = `
-            <td><strong>${a.name}</strong><br><small>${a.phone} | ${a.email || 'No email'}</small></td>
+            <td>
+                <strong>${a.name}</strong> 
+                <span class="badge" style="background:#e0f2fe; color:#0369a1; border:1px solid #bae6fd; font-size:0.75rem; font-weight:700; padding:2px 8px; border-radius:12px; margin-left:4px; font-family:monospace; display:inline-block;">ID: ${patId}</span>
+                <br><small>${a.phone} | ${a.email || 'No email'}</small>
+            </td>
             <td><strong>${deptLabel}</strong><br><small>${a.docName}</small></td>
             <td><strong>${a.date}</strong><br><small>${a.time}</small></td>
             <td><span class="badge ${a.mode || 'in-person'}">${modeText}</span></td>
